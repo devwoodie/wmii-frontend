@@ -1,5 +1,7 @@
 ## 💡 Project P**lan**
 
+[Notion](https://www.notion.so/Cooperation-Project-mobile-dda8a273c88e40a795e6235aa939466b)
+
 ## 📌 Project concept
 
 1. **영화 소개**
