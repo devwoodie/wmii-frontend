@@ -2,7 +2,7 @@
 const App = () => {
     return (
         <div className="App">
-ddd
+            <img style={{"width":"50%"}} src="/img/wmii-logo.png"/>
         </div>
     );
 }
