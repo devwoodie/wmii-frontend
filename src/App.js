@@ -1,8 +1,8 @@
+import './css/style.css';
 
 const App = () => {
     return (
         <div className="App">
-            <img style={{"width":"50%"}} src="/img/wmii-logo.png"/>
             <div className="box1 box"></div>
             <div className="box2 box"></div>
             <div className="box3 box"></div>
