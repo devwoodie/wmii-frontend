@@ -12,7 +12,6 @@ const App = () => {
             <div className="box6 box"></div>
             <Routes>
                 <Route path="/" element={} />
-                <Route path="/" element={} />
             </Routes>
         </div>
     );
