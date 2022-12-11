@@ -1,4 +1,5 @@
 import './css/style.css';
+import { Routes, Route, Link } from 'react-router-dom';
 
 const App = () => {
     return (
@@ -9,6 +10,10 @@ const App = () => {
             <div className="box4 box"></div>
             <div className="box5 box"></div>
             <div className="box6 box"></div>
+            <Routes>
+                <Route path="/" element={} />
+                <Route path="/" element={} />
+            </Routes>
         </div>
     );
 }
