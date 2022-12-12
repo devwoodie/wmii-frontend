@@ -1,11 +1,3 @@
-.box {
-  width: 200px;
-  height: 100px;
-  margin: 10px auto;
-  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
-  border-radius: 15px;
-}
-
 .Home {
   margin-bottom: 100px;
 }
@@ -123,7 +115,6 @@
   width: 100%;
   padding: 15px 0;
   text-align: center;
-  background: var(--sub-bg);
   background: rgba(56, 56, 72, 0.95);
   display: flex;
   justify-content: space-around;
