@@ -14,7 +14,7 @@
     display: inline-block;
     margin-right: 10px;
     font-size: 1.7rem;
-    width: 25px; height: 25px;
+    width: 25px; height: 30px;
   }
 }
 //App.js
@@ -48,7 +48,6 @@
     width: 100%;
     padding: 15px 0;
     text-align: center;
-    background: var(--sub-bg);
     background: rgba(56, 56, 72, 0.95);
     display: flex;
     justify-content: space-around;
