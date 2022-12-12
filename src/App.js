@@ -19,7 +19,7 @@ const App = () => {
                 <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">큰땃쥐</span>님</div>
             </div>
             <Routes>
-                <Route path="/" element={<Home navigate={navigate} setPageIndex={setPageIndex} />} />
+                <Route path="/" element={<Home navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/recommend" element={<Recommend />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/myinfo" element={<Myinfo />} />
