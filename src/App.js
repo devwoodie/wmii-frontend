@@ -6,7 +6,7 @@ const App = () => {
         <div className="App">
             <div className="box1 box"></div>
             <Routes>
-                <Route path="/" element={} />
+                {/*<Route path="/" element/>*/}
             </Routes>
         </div>
     );
