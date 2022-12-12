@@ -1,12 +1,85 @@
-@import './mixin.scss';
+@import './home.scss';
 
-.box{
-  width: 200px;
-  height: 100px;
-  //background: #1d864a;
-  margin: 10px auto;
-  border-radius: 15px;
+//common
+.inner{padding: 5vw;}
+.mgt{margin-top: 50px;}
+.wrap-tit{
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .tit-icon{
+    color: var(--main-green);
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.7rem;
+    width: 25px; height: 25px;
+  }
 }
-.box1{
-  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+//App.js
+.App{
+  //header
+  .header-wrap{
+    width: 100%;
+    padding: 4vw 5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(35, 35, 46, 0.5);
+    .logo{
+      width: 110px;
+    }
+    .user-name{
+      font-weight: bold;
+      font-size: 1rem;
+      .user-nick{
+        font-size: 1.3rem;
+        color: var(--main-green);
+      }
+    }
+  }
+
+  //navigate wrap
+  .navi-wrap{
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: var(--sub-bg);
+    background: rgba(56, 56, 72, 0.95);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+    .navi-btn{
+      background: none;
+      border: none;
+      display: inline-block;
+      color: var(--main-green);
+      font-size: 8vw;
+      font-size: 2rem;
+      position: relative;
+      &.active{
+        color: #d5d5d5;
+        &::after{
+          display: inline-block;
+          content: '';
+          width: 8vw; height: 8vw;
+          position: absolute;
+          left: 50%; top: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--main-green);
+          border-radius: 50%;
+          z-index: -1;
+          filter: blur(1rem);
+        }
+      }
+    }
+  }
 }
+

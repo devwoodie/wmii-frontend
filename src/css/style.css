@@ -2,11 +2,160 @@
   width: 200px;
   height: 100px;
   margin: 10px auto;
+  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
   border-radius: 15px;
 }
 
-.box1 {
+.Home {
+  margin-bottom: 100px;
+}
+.Home .recent-movie-wrap .recent-movie-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont {
+  width: 160px;
+  margin-right: 20px;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-poster {
+  border-radius: 10px;
+  box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+  height: 220px;
+  background: #595959;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-title {
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: 5px 0;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title {
+  font-size: 0.7rem;
+  text-align: center;
+  display: block;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title .bar {
+  margin: 0 5px;
+}
+.Home .recommend-movie-wrap .recommend-movie-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont {
+  width: 160px;
+  margin-right: 20px;
+}
+.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont .movie-poster {
+  border-radius: 10px;
+  box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+  height: 220px;
+  background: #595959;
+}
+.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont .movie-title {
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: 5px 0;
+}
+.Home .banner-wrap .main-banner {
+  margin-top: 20px;
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+  padding: 35px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.inner {
+  padding: 5vw;
+}
+
+.mgt {
+  margin-top: 50px;
+}
+
+.wrap-tit {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wrap-tit .tit-icon {
+  color: var(--main-green);
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.7rem;
+  width: 25px;
+  height: 25px;
+}
+
+.App .header-wrap {
+  width: 100%;
+  padding: 4vw 5vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(35, 35, 46, 0.5);
+}
+.App .header-wrap .logo {
+  width: 110px;
+}
+.App .header-wrap .user-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.App .header-wrap .user-name .user-nick {
+  font-size: 1.3rem;
+  color: var(--main-green);
+}
+.App .navi-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: var(--sub-bg);
+  background: rgba(56, 56, 72, 0.95);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+}
+.App .navi-wrap .navi-btn {
+  background: none;
+  border: none;
+  display: inline-block;
+  color: var(--main-green);
+  font-size: 8vw;
+  font-size: 2rem;
+  position: relative;
+}
+.App .navi-wrap .navi-btn.active {
+  color: #d5d5d5;
+}
+.App .navi-wrap .navi-btn.active::after {
+  display: inline-block;
+  content: "";
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--main-green);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(1rem);
 }
 
 /*# sourceMappingURL=style.css.map */

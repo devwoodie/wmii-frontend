@@ -1,0 +1,86 @@
+@import './mixin.scss';
+
+.box{
+  width: 200px;
+  height: 100px;
+  //background: #1d864a;
+  margin: 10px auto;
+  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+  border-radius: 15px;
+}
+//Home
+.Home{
+  margin-bottom: 100px;
+  //최신영화
+  .recent-movie-wrap{
+    .recent-movie-list {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .recent-movie-cont {
+        width: 160px;
+        margin-right: 20px;
+        .movie-poster {
+          border-radius: 10px;
+          box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+          //임시
+          height: 220px;
+          background: #595959;
+        }
+        .movie-title {
+          font-size: 1rem;
+          text-align: center;
+          display: block;
+          margin: 5px 0;
+        }
+        .sub-title {
+          font-size: .7rem;
+          text-align: center;
+          display: block;
+          .bar {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  //추천 영화
+  .recommend-movie-wrap {
+    .recommend-movie-list {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .recommend-movie-cont {
+        width: 160px;
+        margin-right: 20px;
+        .movie-poster {
+          border-radius: 10px;
+          box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+          //임시
+          height: 220px;
+          background: #595959;
+        }
+        .movie-title {
+          font-size: 1rem;
+          text-align: center;
+          display: block;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  //배너
+  .banner-wrap{
+    .main-banner{
+      margin-top: 20px;
+      background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+      padding: 35px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: left;
+      border-radius: 10px;
+    }
+  }
+}
