@@ -1,8 +1,8 @@
 const Search = () => {
     return(
-        <>
-            Search
-        </>
+        <div className="Search inner">
+
+        </div>
     )
 }
 
