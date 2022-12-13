@@ -92,7 +92,7 @@ const Genre = () => {
     return(
         <div className="qa-wrap">
             <h3 className="question">좋아하는 장르</h3>
-            <div className="answer-wrap">
+            <div className="answer-wrap genre">
                 <div className="answer">
                     <input name="genre" value="action" id="action" type="radio" />
                     <label htmlFor="action">액션</label>

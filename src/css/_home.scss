@@ -68,12 +68,14 @@
     .main-banner{
       @include gradLiner();
       margin-top: 20px;
-      padding: 35px;
-      font-size: 1.3rem;
+      padding: 30px;
+      font-size: 1.2rem;
       font-weight: bold;
       text-align: left;
       border-radius: 10px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }

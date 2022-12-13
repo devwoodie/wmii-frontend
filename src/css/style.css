@@ -56,12 +56,14 @@
 .Home .banner-wrap .main-banner {
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
   margin-top: 20px;
-  padding: 35px;
-  font-size: 1.3rem;
+  padding: 30px;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
   border-radius: 10px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Recommend {
@@ -105,6 +107,9 @@
   margin-right: 10px;
   margin-top: 5px;
   font-size: 1rem;
+}
+.Recommend .recommend-qa .qa-wrap .answer-wrap.genre .answer {
+  width: 30%;
 }
 .Recommend .recommend-btn {
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
@@ -185,6 +190,12 @@
   margin: 0 15px 5px 0;
   font-size: 0.8rem;
   color: #d5d5d5;
+}
+.Search .search-text {
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.6;
+  line-height: 1.5;
 }
 
 .inner {
