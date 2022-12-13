@@ -8,7 +8,7 @@
 .mgt{margin-top: 50px;}
 .wrap-tit{
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,10 +35,11 @@
       width: 110px;
     }
     .user-name{
-      font-weight: bold;
+      font-weight: normal;
       font-size: 1rem;
       .user-nick{
         font-size: 1.3rem;
+        font-weight: bold;
         color: $mainGreen;
       }
     }
@@ -58,6 +59,7 @@
     border-radius: 20px 20px 0 0;
     overflow: hidden;
     box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+    z-index: 999;
     .navi-btn{
       background: none;
       border: none;

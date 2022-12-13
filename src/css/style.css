@@ -58,7 +58,7 @@
   margin-top: 20px;
   padding: 30px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
   text-align: left;
   border-radius: 10px;
   display: flex;
@@ -77,7 +77,6 @@
 }
 .Recommend .recommend-qa .qa-wrap .question {
   font-size: 1.2rem;
-  font-weight: bold;
   display: inline;
   position: relative;
   z-index: 1;
@@ -86,10 +85,10 @@
   content: "";
   display: inline-block;
   width: 100%;
-  height: 5px;
+  height: 8px;
   position: absolute;
   left: 0;
-  bottom: 3px;
+  bottom: 0;
   z-index: -1;
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
   background: #1d864a;
@@ -119,7 +118,7 @@
   color: #d5d5d5;
   padding: 15px 0;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 .Recommend [type=radio] {
   vertical-align: middle;
@@ -134,7 +133,6 @@
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
 }
 .Recommend [type=radio]:checked + label {
-  font-weight: bold;
   color: #1d864a;
 }
 .Recommend .mbti-select {
@@ -208,7 +206,7 @@
 
 .wrap-tit {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -235,11 +233,12 @@
   width: 110px;
 }
 .App .header-wrap .user-name {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1rem;
 }
 .App .header-wrap .user-name .user-nick {
   font-size: 1.3rem;
+  font-weight: bold;
   color: #1d864a;
 }
 .App .navi-wrap {
@@ -256,6 +255,7 @@
   border-radius: 20px 20px 0 0;
   overflow: hidden;
   box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+  z-index: 999;
 }
 .App .navi-wrap .navi-btn {
   background: none;
