@@ -73,6 +73,38 @@ const Recommend = () => {
                             <input name="genre" value="" id="" type="radio"/>
                             <label htmlFor="">범죄</label>
                         </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">SF</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">코미디</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">스릴러</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">공포</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">로맨스</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">판타지</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">음악</label>
+                        </div>
+                        <div className="answer">
+                            <input name="genre" value="" id="" type="radio"/>
+                            <label htmlFor="">전쟁</label>
+                        </div>
                     </div>
                 </div>
                 <button type="submit">submit</button>
