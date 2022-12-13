@@ -1,8 +1,9 @@
-@import './home.scss';
-@import './recommend.scss';
+@import './home';
+@import './recommend';
+@import './mixin';
 
 //common
-.inner{padding: 5vw; width: 10000px;}
+.inner{padding: 5vw;}
 .mgt{margin-top: 50px;}
 .wrap-tit{
   font-size: 1.5rem;
@@ -11,7 +12,7 @@
   justify-content: flex-start;
   align-items: center;
   .tit-icon{
-    color: var(--main-green);
+    color: $mainGreen;
     display: inline-block;
     margin-right: 10px;
     font-size: 1.7rem;
@@ -37,7 +38,7 @@
       font-size: 1rem;
       .user-nick{
         font-size: 1.3rem;
-        color: var(--main-green);
+        color: $mainGreen;
       }
     }
   }
@@ -60,11 +61,11 @@
       background: none;
       border: none;
       display: inline-block;
-      color: var(--main-green);
+      color: $mainGreen;
       font-size: 2rem;
       position: relative;
       &.active{
-        color: #d5d5d5;
+        color: $mainText;
         &::after{
           display: inline-block;
           content: '';
@@ -72,7 +73,7 @@
           position: absolute;
           left: 50%; top: 50%;
           transform: translate(-50%, -50%);
-          background: var(--main-green);
+          background: $mainGreen;
           border-radius: 50%;
           z-index: -1;
           filter: blur(1rem);

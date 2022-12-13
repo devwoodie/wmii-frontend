@@ -57,11 +57,3 @@ div:focus{outline:none;}
 select:focus{outline:none;}
 a{text-decoration: none; color: inherit; outline: none;}
 *{line-height: 1; box-sizing: border-box;}
-
-/* color */
-:root{
-    --main-green: #1d864a;
-    --sub-green: #0d6f37;
-    --main-text: #d5d5d5;
-    --sub-bg: #383848;
-}

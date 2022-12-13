@@ -66,8 +66,8 @@
   //배너
   .banner-wrap{
     .main-banner{
+      @include gradLiner();
       margin-top: 20px;
-      background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
       padding: 35px;
       font-size: 1.3rem;
       font-weight: bold;

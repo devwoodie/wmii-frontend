@@ -1,0 +1,10 @@
+//color
+$mainGreen : #1d864a;
+$subGreen : #0d6f37;
+$mainText : #d5d5d5;
+$subBg : #383848;
+
+//background
+@mixin gradLiner(){
+  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+}
