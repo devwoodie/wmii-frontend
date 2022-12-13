@@ -1,2 +1,47 @@
 @import './mixin.scss';
 
+.Search{
+  margin-top: 50px;
+  .search-wrap{
+    width: 80%;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    .search-box{
+      background: $mainBg;
+      color: $mainText;
+      border: 1px solid $mainGreen;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 1.1rem;
+      width: 100%;
+      &::placeholder{
+        color: $mainGreen;
+      }
+    }
+    .search-btn{
+      background: $mainBg;
+      color: $mainGreen;
+      padding: 3px 10px;
+      position: absolute;
+      right: 2%; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      border-left: 1px solid $mainGreen;
+
+    }
+  }
+  .hash-tag-wrap{
+    width: 75%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .hash-tag{
+      margin: 0 15px 5px 0;
+      font-size: .8rem;
+      color: $mainText;
+    }
+  }
+}
