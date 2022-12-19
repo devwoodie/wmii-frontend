@@ -3,33 +3,7 @@
 @import './search';
 @import './mixin';
 @import './myinfo';
-
-//common
-.inner{padding: 5vw;}
-.mgt{margin-top: 50px;}
-.wrap-tit{
-  font-size: 1.5rem;
-  font-weight: normal;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  .tit-icon{
-    color: $mainGreen;
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.7rem;
-    width: 25px; height: 30px;
-  }
-}
-.user-name{
-  font-weight: normal;
-  font-size: 1rem;
-  .user-nick{
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: $mainGreen;
-  }
-}
+@import './common';
 
 //App.js
 .App{
