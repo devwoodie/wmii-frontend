@@ -20,7 +20,7 @@ const Home = ({navigate, setPageIndex ,Link}) => {
                 </ul>
             </div>
             <div className="recommend-movie-wrap mgt">
-                <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span>추천 영화</h2>
+                <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span> 추천 영화</h2>
                 <ul className="recommend-movie-list">
                     <li className="recommend-movie-cont">
                         <div className="movie-poster">
@@ -31,7 +31,7 @@ const Home = ({navigate, setPageIndex ,Link}) => {
                 </ul>
             </div>
             <div className="banner-wrap mgt">
-                <h2 className="wrap-tit"><span className="tit-icon"><MdTab/></span>더 알아보기</h2>
+                <h2 className="wrap-tit"><span className="tit-icon"><MdTab/></span> 더 알아보기</h2>
                 <div className="main-banner" onClick={() => {navigate('/search'); setPageIndex(2)}}>영화 검색하기<MdArrowForwardIos/></div>
                 <Link className="main-banner" to="//m.search.naver.com/search.naver?where=m&sm=mtb_etc&qvt=0&query=%EA%B0%9C%EB%B4%89%EC%98%88%EC%A0%95%EC%98%81%ED%99%94" target="_blank">개봉 예정 영화<MdArrowForwardIos/></Link>
                 <div className="main-banner">영화 관련 뉴스 보기<MdArrowForwardIos/></div>

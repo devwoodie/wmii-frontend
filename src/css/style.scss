@@ -2,6 +2,7 @@
 @import './recommend';
 @import './search';
 @import './mixin';
+@import './myinfo';
 
 //common
 .inner{padding: 5vw;}
@@ -11,7 +12,7 @@
   font-weight: normal;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   .tit-icon{
     color: $mainGreen;
     display: inline-block;
@@ -20,6 +21,16 @@
     width: 25px; height: 30px;
   }
 }
+.user-name{
+  font-weight: normal;
+  font-size: 1rem;
+  .user-nick{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $mainGreen;
+  }
+}
+
 //App.js
 .App{
   //header
@@ -34,15 +45,7 @@
     .logo{
       width: 110px;
     }
-    .user-name{
-      font-weight: normal;
-      font-size: 1rem;
-      .user-nick{
-        font-size: 1.3rem;
-        font-weight: bold;
-        color: $mainGreen;
-      }
-    }
+
   }
 
   //navigate wrap

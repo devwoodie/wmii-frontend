@@ -1,0 +1,56 @@
+@import './mixin.scss';
+
+.MyInfo {
+  margin-bottom: 100px;
+  .user-wrap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    @include secBorderBottom();
+    .user-left{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      .user-icon{
+        color: $mainText;
+        background: none;
+        border: none;
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-right: 5px;
+        svg{
+          vertical-align: bottom;
+        }
+      }
+    }
+    .user-detail{
+      width: 20%;
+      button{
+        display: inline-block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 5px 0;
+        font-size: .8rem;
+      }
+    }
+  }
+  .Favorites{
+    margin: 30px 0;
+    @include secBorderBottom();
+    .favorite-wrap{
+
+      //empty
+      .empty-list{
+        text-align: center;
+        width: 100%;
+        padding: 40px;
+        margin-top: 15px;
+        color: $whiteOpacity;
+        background: $subBg;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
