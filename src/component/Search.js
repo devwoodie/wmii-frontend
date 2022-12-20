@@ -49,7 +49,6 @@ const Search = () => {
                 <input type="text" ref={searchText} className="search-box" placeholder="Search..."/>
                 <button type="submit" className="search-btn" onClick={searchKeyword}><BsSearch /></button>
             </div>
-
             {noSearch ?
                 <div className="SearchMovies">
                     {
