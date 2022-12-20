@@ -1,12 +1,11 @@
 @import './mixin.scss';
 
 .Search{
-  margin-top: 50px;
   .search-wrap{
     width: 80%;
     text-align: center;
     position: relative;
-    margin: 0 auto;
+    margin: 50px auto 0;
     .search-box{
       background: $mainBg;
       color: $mainText;

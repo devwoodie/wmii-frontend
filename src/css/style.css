@@ -73,7 +73,7 @@
   margin-top: 30px;
 }
 .Recommend .recommend-qa .qa-wrap {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .Recommend .recommend-qa .qa-wrap .question {
   font-size: 1.2rem;
@@ -144,14 +144,11 @@
   color: #d5d5d5;
 }
 
-.Search {
-  margin-top: 50px;
-}
 .Search .search-wrap {
   width: 80%;
   text-align: center;
   position: relative;
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 .Search .search-wrap .search-box {
   background: #23232E;
