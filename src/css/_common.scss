@@ -27,3 +27,35 @@
     color: $mainGreen;
   }
 }
+
+//검색,추천 리스트
+.SearchMovies{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0 50px;
+  .search-movie-list {
+    width: 40%;
+    margin: 20px 0;
+    .search-movie-poster {
+      border-radius: 10px;
+      box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+      overflow: hidden;
+    }
+    .movie-title {
+      font-size: 1rem;
+      text-align: center;
+      display: block;
+      margin: 10px 0;
+    }
+    .sub-title {
+      font-size: .7rem;
+      text-align: center;
+      display: block;
+      .bar {
+        margin: 0 5px;
+      }
+    }
+  }
+}

@@ -193,37 +193,6 @@
   line-height: 1.5;
 }
 
-.SearchMovies {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 20px 0 50px;
-}
-.SearchMovies .search-movie-list {
-  width: 40%;
-  margin: 20px 0;
-}
-.SearchMovies .search-movie-list .search-movie-poster {
-  border-radius: 10px;
-  box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-  overflow: hidden;
-}
-.SearchMovies .search-movie-list .movie-title {
-  font-size: 1rem;
-  text-align: center;
-  display: block;
-  margin: 10px 0;
-}
-.SearchMovies .search-movie-list .sub-title {
-  font-size: 0.7rem;
-  text-align: center;
-  display: block;
-}
-.SearchMovies .search-movie-list .sub-title .bar {
-  margin: 0 5px;
-}
-
 .MyInfo {
   margin-bottom: 100px;
 }
@@ -318,6 +287,37 @@
   font-size: 1.3rem;
   font-weight: bold;
   color: #1d864a;
+}
+
+.SearchMovies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0 50px;
+}
+.SearchMovies .search-movie-list {
+  width: 40%;
+  margin: 20px 0;
+}
+.SearchMovies .search-movie-list .search-movie-poster {
+  border-radius: 10px;
+  box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+  overflow: hidden;
+}
+.SearchMovies .search-movie-list .movie-title {
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+}
+.SearchMovies .search-movie-list .sub-title {
+  font-size: 0.7rem;
+  text-align: center;
+  display: block;
+}
+.SearchMovies .search-movie-list .sub-title .bar {
+  margin: 0 5px;
 }
 
 .App .header-wrap {
