@@ -2,6 +2,8 @@
 
 .inner{padding: 5vw;}
 .mgt{margin-top: 50px;}
+.start{opacity: 0;}
+.end{opacity: 1; transition : opacity 0.3s;}
 .wrap-tit{
   font-size: 1.5rem;
   font-weight: normal;

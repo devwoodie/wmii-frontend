@@ -6,7 +6,7 @@ import MyInfo from "./component/MyInfo";
 import { MdOutlineHome, MdOutlineRecommend, MdOutlineManageSearch } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const App = () => {
     let navigate = useNavigate();

@@ -1,6 +1,8 @@
 import { MdOutlineMovieCreation, MdTab, MdOutlineMovieFilter, MdArrowForwardIos } from 'react-icons/md';
+import {useEffect, useState} from "react";
 
 const Home = ({navigate, setPageIndex ,Link}) => {
+
     return(
         <div className="Home inner">
             <div className="recent-movie-wrap">

@@ -1,5 +1,5 @@
 import {BsSearch} from "react-icons/bs";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
@@ -11,8 +11,6 @@ const Search = () => {
     let [emptyList, setEmptyList] = useState(false);
 
     const searchKeyword = () => {
-
-        console.log(searchList)
         let thisYear = new Date().getFullYear();
         const keyword = searchText.current.value;
         const ID_KEY = '0BhdufNATIrhn8DtcoRu';
@@ -42,7 +40,6 @@ const Search = () => {
                     if(movieData.length === 0){
                         setEmptyList(true);
                     }else{setEmptyList(false); }
-
                 }).catch((error) => {
                 setNoSearch(false);
                 console.log(error);
