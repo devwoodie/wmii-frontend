@@ -8,8 +8,12 @@ const Search = () => {
     const searchText = useRef(null);
     let [searchList, setSearchList] = useState([]);
     let [noSearch, setNoSearch] = useState(false);
+    let [emptyList, setEmptyList] = useState(false);
 
     const searchKeyword = () => {
+
+        console.log(searchList)
+        let thisYear = new Date().getFullYear();
         const keyword = searchText.current.value;
         const ID_KEY = '0BhdufNATIrhn8DtcoRu';
         const SECRET_KEY = 'bEDLIjkryc';
@@ -24,23 +28,28 @@ const Search = () => {
                     query: keyword,
                     display: 20,
                     yearfrom: 2000,
-                    yearto: 2022
+                    yearto: thisYear,
                 },
                 headers: {
                     'X-Naver-Client-Id': ID_KEY,
                     'X-Naver-Client-Secret': SECRET_KEY
                 }
             }).then((response) => {
-                setNoSearch(true);
+                    setNoSearch(true);
                     const movieData = response.data.items;
                     let copy = [...searchList, ...movieData];
                     setSearchList(copy);
+                    if(movieData.length === 0){
+                        setEmptyList(true);
+                    }else{setEmptyList(false); }
+
                 }).catch((error) => {
                 setNoSearch(false);
                 console.log(error);
             });
         };
     };
+
 
     return(
         <div className="Search inner">
@@ -52,18 +61,21 @@ const Search = () => {
             {noSearch ?
                 <div className="SearchMovies">
                     {
-                        searchList.map((movie,key) => (
-                            <SearchMovie
-                                key={key}
-                                title={movie.title}
-                                poster={movie.image}
-                                year={movie.pubDate}
-                                rating={movie.userRating}
-                            />
-                        ))
+                        searchList.map((movie,key) => {
+                            return (
+                                <SearchMovie
+                                    key={key}
+                                    title={movie.title}
+                                    poster={movie.image}
+                                    year={movie.pubDate}
+                                    rating={movie.userRating}
+                                />
+                            )
+                        })
                     }
                 </div> : <DefaultPage />
             }
+            {emptyList ? <p className="search-text">일치하는 영화가 없습니다</p> : null}
         </div>
     )
 }
