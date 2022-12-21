@@ -1,7 +1,28 @@
 import {MdOutlineMovieCreation} from "react-icons/md";
+import axios from "axios";
 import {useEffect, useState} from "react";
 
 const Recommend = () => {
+
+    const ID_KEY = '0BhdufNATIrhn8DtcoRu';
+    const SECRET_KEY = 'bEDLIjkryc';
+    const searchUrl = '/v1/search/movie.json';
+
+    axios.get(searchUrl,{
+        params: {
+            query: '', //키워드 입력 필수.....
+            display: 20,
+        },
+        headers: {
+            'X-Naver-Client-Id': ID_KEY,
+            'X-Naver-Client-Secret': SECRET_KEY
+        }
+    }).then((response) => {
+
+    }).catch((error) => {
+
+        console.log(error);
+    });
 
     return(
         <div className="Recommend inner">
@@ -96,43 +117,43 @@ const Genre = () => {
             <h3 className="question">좋아하는 장르</h3>
             <div className="answer-wrap genre">
                 <div className="answer">
-                    <input name="genre" value="action" id="action" type="radio" />
+                    <input name="genre" value="19" id="action" type="radio" />
                     <label htmlFor="action">액션</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="crime" id="crime" type="radio"/>
+                    <input name="genre" value="16" id="crime" type="radio"/>
                     <label htmlFor="crime">범죄</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="sf" id="sf" type="radio"/>
+                    <input name="genre" value="18" id="sf" type="radio"/>
                     <label htmlFor="sf">SF</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="comedy" id="comedy" type="radio"/>
+                    <input name="genre" value="11" id="comedy" type="radio"/>
                     <label htmlFor="comedy">코미디</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="thriller" id="thriller" type="radio"/>
+                    <input name="genre" value="7" id="thriller" type="radio"/>
                     <label htmlFor="thriller">스릴러</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="horror" id="horror" type="radio"/>
+                    <input name="genre" value="4" id="horror" type="radio"/>
                     <label htmlFor="horror">공포</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="romance" id="romance" type="radio"/>
+                    <input name="genre" value="5" id="romance" type="radio"/>
                     <label htmlFor="romance">로맨스</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="fantasy" id="fantasy" type="radio"/>
+                    <input name="genre" value="2" id="fantasy" type="radio"/>
                     <label htmlFor="fantasy">판타지</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="music" id="music" type="radio"/>
+                    <input name="genre" value="27" id="music" type="radio"/>
                     <label htmlFor="music">음악</label>
                 </div>
                 <div className="answer">
-                    <input name="genre" value="animation" id="animation" type="radio"/>
+                    <input name="genre" value="15" id="animation" type="radio"/>
                     <label htmlFor="animation ">만화</label>
                 </div>
             </div>
