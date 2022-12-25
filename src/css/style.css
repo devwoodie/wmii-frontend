@@ -304,6 +304,8 @@
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
   overflow: hidden;
+  height: 220px;
+  background: #595959;
 }
 .SearchMovies .search-movie-list .movie-title {
   font-size: 1rem;

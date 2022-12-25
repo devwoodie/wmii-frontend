@@ -1,8 +1,11 @@
 import {MdOutlineMovieCreation} from "react-icons/md";
+import RecommendList from './RecommendList';
 import axios from "axios";
 import {useEffect, useState} from "react";
 
 const Recommend = () => {
+
+    const [recommend, setRecommend] = useState(false);
 
     const ID_KEY = '0BhdufNATIrhn8DtcoRu';
     const SECRET_KEY = 'bEDLIjkryc';
@@ -11,14 +14,18 @@ const Recommend = () => {
     return(
         <div className="Recommend inner">
             <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 내게 맞는 영화 추천</h2>
-            <form className="recommend-qa">
-                <Gender />
-                <Age />
-                <Mbti />
-                <Genre />
-                <Year />
-                <button className="recommend-btn" type="submit">영화 추천 받기</button>
-            </form>
+            {
+                recommend ?
+                    <RecommendList /> :
+                    <form className="recommend-qa">
+                        <Gender />
+                        <Age />
+                        <Mbti />
+                        <Genre />
+                        <Year />
+                        <button onClick={() => {setRecommend(true)}} className="recommend-btn" type="button">영화 추천 받기</button>
+                    </form>
+            }
         </div>
     )
 }
