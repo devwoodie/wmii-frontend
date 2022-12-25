@@ -35,7 +35,7 @@ const Search = () => {
             }).then((response) => {
                     setNoSearch(true);
                     const movieData = response.data.items;
-                    let copy = [...searchList, ...movieData];
+                    let copy = [ ...movieData];
                     setSearchList(copy);
                     if(movieData.length === 0){
                         setEmptyList(true);
