@@ -8,22 +8,6 @@ const Recommend = () => {
     const SECRET_KEY = 'bEDLIjkryc';
     const searchUrl = '/v1/search/movie.json';
 
-    axios.get(searchUrl,{
-        params: {
-            query: '', //키워드 입력 필수.....
-            display: 20,
-        },
-        headers: {
-            'X-Naver-Client-Id': ID_KEY,
-            'X-Naver-Client-Secret': SECRET_KEY
-        }
-    }).then((response) => {
-
-    }).catch((error) => {
-
-        console.log(error);
-    });
-
     return(
         <div className="Recommend inner">
             <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 내게 맞는 영화 추천</h2>
