@@ -7,6 +7,7 @@ import { MdOutlineHome, MdOutlineRecommend, MdOutlineManageSearch } from 'react-
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";
+import MyInfoDetail from "./component/MyInfoDetail";
 
 const App = () => {
     let navigate = useNavigate();
@@ -24,7 +25,8 @@ const App = () => {
                 <Route path="/" element={<Home navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/recommend" element={<Recommend />} />
                 <Route path="/search" element={<Search />} />
-                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} />} />
+                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} />} />
+                <Route path="/myinfo/detail" element={<MyInfoDetail />} />
             </Routes>
             <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
         </div>
