@@ -28,6 +28,12 @@
       "react-app/jest"
     ]
   },
+  "overrides" : {
+    "foo" : {
+      "." : "1.0.0",
+      "bar" : "1.0.0"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
