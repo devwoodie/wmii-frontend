@@ -1,27 +1,30 @@
 import { MdOutlineMovieCreation, MdTab, MdOutlineMovieFilter, MdArrowForwardIos } from 'react-icons/md';
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Swiper from "swiper";
+import 'swiper/css';
 
 const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
-    const [nowPlayingData, setNowPlayingData] = useState(null);
+    const [nowPlayingData, setNowPlayingData] = useState([]);
+    const [upComingData, setUpComingData] = useState([]);
 
     useEffect(() => {
-        data();
+        nowPlaying();
+        upComing()
     }, []);
 
-    const data = () => {
+    //최신 영화
+    const nowPlaying = async () => {
         try{
-            console.log('try')
-            axios.get(`${apiUrl}now_playing`,{
+            await axios.get(`${apiUrl}now_playing`,{
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
                     language : 'ko',
                 }
             }).then((response) => {
-                console.log(response.data.results)
-                setNowPlayingData(...response.data.results)
-                console.log(nowPlayingData);
+                // console.log(response.data.results)
+                setNowPlayingData(response.data.results)
             })
         }
         catch (error){
@@ -29,40 +32,67 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
         }
     }
 
-// console.log(response.data)
+    //개봉 예정 영화
+    const upComing = async () => {
+        try{
+            await axios.get(`${apiUrl}upcoming`,{
+                params: {
+                    api_key: process.env.REACT_APP_API_KEY,
+                    language : 'ko',
+                }
+            }).then((response) => {
+                console.log(response.data.results)
+                setUpComingData(response.data.results)
+            })
+        }
+        catch (error){
+            console.log(error)
+        }
+    }
 
+    //swiper
+    const recentSlide = new Swiper('.recentSwiper',{
+        slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
+        loop : false, // 슬라이드 반복 여부
+        loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+        pagination : false, // pager 여부
+    })
 
     return(
         <div className="Home inner">
-            <div className="recent-movie-wrap">
+            <div className="recent-movie-wrap swiper recentSwiper" >
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 최신 영화</h2>
-                <ul className="recent-movie-list">
-                    {/*{*/}
-                    {/*    nowPlayingData.map((data, key) => (*/}
-                    {/*        <li key={data.id} className="recent-movie-cont">*/}
-                    {/*            <div className="movie-poster">*/}
-                    {/*                /!*<img src={} alt={} />*!/*/}
-                    {/*            </div>*/}
-                    {/*            <span className="movie-title">{data.title}</span>*/}
-                    {/*            <div className="sub-title">*/}
-                    {/*                <span className="genre">스릴러</span>*/}
-                    {/*                <span className="bar">|</span>*/}
-                    {/*                <span className="opening-date">{data.release_date}</span>*/}
-                    {/*            </div>*/}
-                    {/*        </li>*/}
-                    {/*    ))*/}
-                    {/*}*/}
+                <ul className="recent-movie-list swiper-wrapper">
+                    {
+                        nowPlayingData.map((data, key) => (
+                            <li key={data.id} className="swiper-slide recent-movie-cont">
+                                <div className="movie-poster">
+                                    <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
+                                </div>
+                                <span className="movie-title">{data.title}</span>
+                                <div className="sub-title">
+                                    <span className="opening-date">{data.release_date}</span>
+                                    <span className="bar">|</span>
+                                    <span className="genre">평점: {data.vote_average}</span>
+                                </div>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
-            <div className="recommend-movie-wrap mgt">
-                <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span> 추천 영화</h2>
-                <ul className="recommend-movie-list">
-                    <li className="recommend-movie-cont">
-                        <div className="movie-poster">
-                            {/*<img src={} alt={} />*/}
-                        </div>
-                        <span className="movie-title">올빼미</span>
-                    </li>
+            <div className="upcoming-movie-wrap mgt swiper recentSwiper">
+                <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span> 개봉 예정 영화</h2>
+                <ul className="upcoming-movie-list swiper-wrapper">
+                    {
+                        upComingData.map((data, key) => (
+                            <li key={data.id} className="swiper-slide upcoming-movie-cont">
+                                <div className="movie-poster">
+                                    <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
+                                </div>
+                                <span className="movie-title">{data.title}</span>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
             <div className="banner-wrap mgt">

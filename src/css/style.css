@@ -12,16 +12,23 @@
   margin-right: 20px;
 }
 .Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-poster {
+  width: 100%;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-  height: 220px;
-  background: #595959;
+  height: 240px;
+}
+.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-poster img {
+  height: 100%;
 }
 .Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-title {
   font-size: 1rem;
   text-align: center;
   display: block;
-  margin: 5px 0;
+  margin: 10px 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title {
   font-size: 0.7rem;
@@ -31,27 +38,34 @@
 .Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title .bar {
   margin: 0 5px;
 }
-.Home .recommend-movie-wrap .recommend-movie-list {
+.Home .upcoming-movie-wrap .upcoming-movie-list {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont {
+.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont {
   width: 160px;
   margin-right: 20px;
 }
-.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont .movie-poster {
+.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-poster {
+  width: 100%;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-  height: 220px;
-  background: #595959;
+  height: 240px;
 }
-.Home .recommend-movie-wrap .recommend-movie-list .recommend-movie-cont .movie-title {
+.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-poster img {
+  height: 100%;
+}
+.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-title {
   font-size: 1rem;
   text-align: center;
   display: block;
-  margin: 5px 0;
+  margin: 10px 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Home .banner-wrap .main-banner {
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);

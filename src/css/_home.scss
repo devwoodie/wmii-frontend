@@ -14,17 +14,21 @@
         width: 160px;
         margin-right: 20px;
         .movie-poster {
+          width: 100%;
+          overflow: hidden;
           border-radius: 10px;
           box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-          //임시
-          height: 220px;
-          background: #595959;
+          height: 240px;
+          img{height: 100%;}
         }
         .movie-title {
           font-size: 1rem;
           text-align: center;
           display: block;
-          margin: 5px 0;
+          margin: 10px 0 5px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
         }
         .sub-title {
           font-size: .7rem;
@@ -37,28 +41,32 @@
       }
     }
   }
-  //추천 영화
-  .recommend-movie-wrap {
-    .recommend-movie-list {
+  //개봉 예정 영화
+  .upcoming-movie-wrap {
+    .upcoming-movie-list {
       margin-top: 20px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      .recommend-movie-cont {
+      .upcoming-movie-cont {
         width: 160px;
         margin-right: 20px;
         .movie-poster {
+          width: 100%;
+          overflow: hidden;
           border-radius: 10px;
           box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-          //임시
-          height: 220px;
-          background: #595959;
+          height: 240px;
+          img{height: 100%;}
         }
         .movie-title {
           font-size: 1rem;
           text-align: center;
           display: block;
-          margin: 5px 0;
+          margin: 10px 0 5px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
         }
       }
     }
