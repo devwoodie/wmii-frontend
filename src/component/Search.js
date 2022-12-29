@@ -13,9 +13,8 @@ const Search = () => {
     const searchKeyword = () => {
         let thisYear = new Date().getFullYear();
         const keyword = searchText.current.value;
-        const ID_KEY = '0BhdufNATIrhn8DtcoRu';
-        const SECRET_KEY = 'bEDLIjkryc';
-        const searchUrl = '/v1/search/movie.json';
+        const API_KEY = '34f633dbcac633d58c7c478c1c3c38b4';
+        const searchUrl = 'https://api.themoviedb.org/3/movie/now_playing';
         //axios
         if(keyword === ''){
             alert('키워드를 입력해주세요');
@@ -23,25 +22,12 @@ const Search = () => {
         }else{
             axios.get(searchUrl,{
                 params: {
-                    query: keyword,
-                    display: 20,
-                    yearfrom: 2000,
-                    yearto: thisYear,
-                },
-                headers: {
-                    'X-Naver-Client-Id': ID_KEY,
-                    'X-Naver-Client-Secret': SECRET_KEY
+                    api_key: API_KEY,
+                    language : 'ko'
                 }
             }).then((response) => {
-                    setNoSearch(true);
-                    const movieData = response.data.items;
-                    let copy = [ ...movieData];
-                    setSearchList(copy);
-                    if(movieData.length === 0){
-                        setEmptyList(true);
-                    }else{setEmptyList(false); }
+                console.log(response.data)
                 }).catch((error) => {
-                setNoSearch(false);
                 console.log(error);
             });
         };
@@ -62,10 +48,6 @@ const Search = () => {
                             return (
                                 <SearchMovie
                                     key={key}
-                                    title={movie.title}
-                                    poster={movie.image}
-                                    year={movie.pubDate}
-                                    rating={movie.userRating}
                                 />
                             )
                         })
@@ -91,25 +73,20 @@ const DefaultPage = () => {
     )
 }
 
-const SearchMovie = ({poster, year, title, rating}) => {
+const SearchMovie = () => {
     return(
         <div className="search-movie-list">
-            <div className="search-movie-poster"><img src={poster} alt="movie-poster" /></div>
-            <span className="movie-title">{title.replace(/<b>/gi,"").replace(/<\/b>/gi,"")}</span>
+            <div className="search-movie-poster"><img src="" alt="movie-poster" /></div>
+            <span className="movie-title"></span>
             <div className="sub-title">
-                <span className="genre">{year}</span>
+                <span className="genre"></span>
                 <span className="bar">|</span>
-                <span className="opening-date">평점: {rating}</span>
+                <span className="opening-date">평점: </span>
             </div>
         </div>
     )
 }
 
-SearchMovie.propTypes = {
-    year: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired,
-}
+
 
 export default Search;
