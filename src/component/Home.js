@@ -1,24 +1,57 @@
 import { MdOutlineMovieCreation, MdTab, MdOutlineMovieFilter, MdArrowForwardIos } from 'react-icons/md';
 import {useEffect, useState} from "react";
+import axios from "axios";
 
-const Home = ({navigate, setPageIndex ,Link}) => {
+const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
+
+    const [nowPlayingData, setNowPlayingData] = useState(null);
+
+    useEffect(() => {
+        data();
+    }, []);
+
+    const data = () => {
+        try{
+            console.log('try')
+            axios.get(`${apiUrl}now_playing`,{
+                params: {
+                    api_key: process.env.REACT_APP_API_KEY,
+                    language : 'ko',
+                }
+            }).then((response) => {
+                console.log(response.data.results)
+                setNowPlayingData(...response.data.results)
+                console.log(nowPlayingData)
+            })
+        }
+        catch (error){
+            console.log(error)
+        }
+    }
+
+// console.log(response.data)
+
 
     return(
         <div className="Home inner">
             <div className="recent-movie-wrap">
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 최신 영화</h2>
                 <ul className="recent-movie-list">
-                    <li className="recent-movie-cont">
-                        <div className="movie-poster">
-                            {/*<img src={} alt={} />*/}
-                        </div>
-                        <span className="movie-title">올빼미</span>
-                        <div className="sub-title">
-                            <span className="genre">스릴러</span>
-                            <span className="bar">|</span>
-                            <span className="opening-date">2022.11.23</span>
-                        </div>
-                    </li>
+                    {/*{*/}
+                    {/*    nowPlayingData.map((data, key) => (*/}
+                    {/*        <li key={data.id} className="recent-movie-cont">*/}
+                    {/*            <div className="movie-poster">*/}
+                    {/*                /!*<img src={} alt={} />*!/*/}
+                    {/*            </div>*/}
+                    {/*            <span className="movie-title">{data.title}</span>*/}
+                    {/*            <div className="sub-title">*/}
+                    {/*                <span className="genre">스릴러</span>*/}
+                    {/*                <span className="bar">|</span>*/}
+                    {/*                <span className="opening-date">{data.release_date}</span>*/}
+                    {/*            </div>*/}
+                    {/*        </li>*/}
+                    {/*    ))*/}
+                    {/*}*/}
                 </ul>
             </div>
             <div className="recommend-movie-wrap mgt">

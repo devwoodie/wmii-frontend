@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const Search = () => {
+const Search = ({apiUrl}) => {
 
     const searchText = useRef(null);
     let [searchList, setSearchList] = useState([]);
@@ -11,22 +11,19 @@ const Search = () => {
     let [emptyList, setEmptyList] = useState(false);
 
     const searchKeyword = () => {
-        let thisYear = new Date().getFullYear();
         const keyword = searchText.current.value;
-        const API_KEY = '34f633dbcac633d58c7c478c1c3c38b4';
-        const searchUrl = 'https://api.themoviedb.org/3/movie/now_playing';
         //axios
         if(keyword === ''){
             alert('키워드를 입력해주세요');
             setNoSearch(false);
         }else{
-            axios.get(searchUrl,{
+            axios.get(`${apiUrl}now_playing`,{
                 params: {
-                    api_key: API_KEY,
+                    api_key: process.env.REACT_APP_API_KEY,
                     language : 'ko'
                 }
             }).then((response) => {
-                console.log(response.data)
+                console.log(response.data.results)
                 }).catch((error) => {
                 console.log(error);
             });
