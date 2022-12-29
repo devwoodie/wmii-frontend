@@ -21,7 +21,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
             }).then((response) => {
                 console.log(response.data.results)
                 setNowPlayingData(...response.data.results)
-                console.log(nowPlayingData)
+                console.log(nowPlayingData);
             })
         }
         catch (error){
