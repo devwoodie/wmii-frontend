@@ -1,27 +1,24 @@
 .Home {
   margin-bottom: 100px;
 }
-.Home .recent-movie-wrap .recent-movie-list {
+.Home .home-movie-wrap .home-movie-list {
   margin-top: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont {
   width: 160px;
   margin-right: 20px;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-poster {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
   height: 240px;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-poster img {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster img {
   height: 100%;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .movie-title {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-title {
   font-size: 1rem;
   text-align: center;
   display: block;
@@ -30,42 +27,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont .sub-title {
   font-size: 0.7rem;
   text-align: center;
   display: block;
 }
-.Home .recent-movie-wrap .recent-movie-list .recent-movie-cont .sub-title .bar {
+.Home .home-movie-wrap .home-movie-list .home-movie-cont .sub-title .bar {
   margin: 0 5px;
-}
-.Home .upcoming-movie-wrap .upcoming-movie-list {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont {
-  width: 160px;
-  margin-right: 20px;
-}
-.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-poster {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-  height: 240px;
-}
-.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-poster img {
-  height: 100%;
-}
-.Home .upcoming-movie-wrap .upcoming-movie-list .upcoming-movie-cont .movie-title {
-  font-size: 1rem;
-  text-align: center;
-  display: block;
-  margin: 10px 0 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .Home .banner-wrap .main-banner {
   background: linear-gradient(135deg, #33a966, 40%, #0d6f37);

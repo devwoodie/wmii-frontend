@@ -52,20 +52,20 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
     //swiper
     const recentSlide = new Swiper('.recentSwiper',{
-        slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
-        loop : false, // 슬라이드 반복 여부
-        loopAdditionalSlides : 1, // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
-        pagination : false, // pager 여부
+        slidesPerView : 'auto',
+        loop : false,
+        loopAdditionalSlides : 1,
+        pagination : false,
     })
 
     return(
         <div className="Home inner">
-            <div className="recent-movie-wrap swiper recentSwiper" >
+            <div className="home-movie-wrap swiper recentSwiper" >
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 최신 영화</h2>
-                <ul className="recent-movie-list swiper-wrapper">
+                <ul className="home-movie-list swiper-wrapper">
                     {
                         nowPlayingData.map((data, key) => (
-                            <li key={data.id} className="swiper-slide recent-movie-cont">
+                            <li key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>
@@ -80,12 +80,12 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     }
                 </ul>
             </div>
-            <div className="upcoming-movie-wrap mgt swiper recentSwiper">
+            <div className="home-movie-wrap mgt swiper recentSwiper">
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span> 개봉 예정 영화</h2>
-                <ul className="upcoming-movie-list swiper-wrapper">
+                <ul className="home-movie-list swiper-wrapper">
                     {
                         upComingData.map((data, key) => (
-                            <li key={data.id} className="swiper-slide upcoming-movie-cont">
+                            <li key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>
