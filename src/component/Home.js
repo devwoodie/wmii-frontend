@@ -1,5 +1,6 @@
 import { MdOutlineMovieCreation, MdTab, MdOutlineMovieFilter, MdArrowForwardIos } from 'react-icons/md';
 import {useEffect, useState} from "react";
+import MovieDetail from "./MovieDetail";
 import axios from "axios";
 import Swiper from "swiper";
 import 'swiper/css';
@@ -11,7 +12,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
     useEffect(() => {
         nowPlaying();
-        upComing()
+        upComing();
     }, []);
 
     //최신 영화
@@ -58,6 +59,11 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
         pagination : false,
     })
 
+    const clickMovie = () => {
+        navigate('/detail');
+
+    }
+
     return(
         <div className="Home inner">
             <div className="home-movie-wrap swiper recentSwiper" >
@@ -65,7 +71,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                 <ul className="home-movie-list swiper-wrapper">
                     {
                         nowPlayingData.map((data, key) => (
-                            <li key={data.id} className="swiper-slide home-movie-cont">
+                            <li onClick={clickMovie} key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>
@@ -85,7 +91,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                 <ul className="home-movie-list swiper-wrapper">
                     {
                         upComingData.map((data, key) => (
-                            <li key={data.id} className="swiper-slide home-movie-cont">
+                            <li onClick={() => {navigate('/detail')}} key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>

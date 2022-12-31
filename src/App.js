@@ -3,11 +3,13 @@ import Home from "./component/Home";
 import Recommend from "./component/Recommend";
 import Search from "./component/Search";
 import MyInfo from "./component/MyInfo";
+import MyInfoDetail from "./component/MyInfoDetail";
+import MovieDetail from "./component/MovieDetail";
 import { MdOutlineHome, MdOutlineRecommend, MdOutlineManageSearch } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";
-import MyInfoDetail from "./component/MyInfoDetail";
+
 
 const App = () => {
     const apiUrl = "https://api.themoviedb.org/3/movie/";
@@ -28,6 +30,7 @@ const App = () => {
                 <Route path="/search" element={<Search apiUrl={apiUrl} />} />
                 <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} />} />
                 <Route path="/myinfo/detail" element={<MyInfoDetail />} />
+                <Route path="/detail" element={<MovieDetail />} />
             </Routes>
             <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
         </div>
