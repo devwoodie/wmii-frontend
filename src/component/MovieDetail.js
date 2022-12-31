@@ -1,4 +1,3 @@
-import { useLocation } from "react-router";
 
 const MovieDetail = ({data}) => {
     console.log(data)
