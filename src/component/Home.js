@@ -59,10 +59,10 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
         pagination : false,
     })
 
-    const clickMovie = () => {
-        navigate('/detail');
-
-    }
+    // const clickMovie = () => {
+    //     navigate('/detail');
+    //     console.log(data)
+    // }
 
     return(
         <div className="Home inner">
@@ -71,7 +71,9 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                 <ul className="home-movie-list swiper-wrapper">
                     {
                         nowPlayingData.map((data, key) => (
-                            <li onClick={clickMovie} key={data.id} className="swiper-slide home-movie-cont">
+                            <li onClick={() => {
+                                navigate('/detail',{data})
+                            }} key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>
