@@ -30,7 +30,7 @@ const MovieDetail = ({apiUrl}) => {
 
     return(
         <div className="MovieDetail inner">
-            {infoData.title}
+
         </div>
     )
 }
