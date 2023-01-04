@@ -300,6 +300,18 @@
 .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .sub-text-wrap .sub-text i {
   margin-right: 5px;
 }
+.MovieDetail .detail-wrap .overview-text-wrap {
+  margin-top: 80px;
+  font-size: 0.9rem;
+}
+.MovieDetail .detail-wrap .overview-text-wrap .overview-tit {
+  display: block;
+  margin-bottom: 5px;
+}
+.MovieDetail .detail-wrap .overview-text-wrap .overview-text {
+  line-height: 1.2;
+  font-weight: 300;
+}
 
 .inner {
   padding: 5vw;

@@ -54,7 +54,10 @@ const MovieDetail = ({apiUrl}) => {
                         </div>
                     </div>
                 </div>
-                {/*<div>sssssss</div>*/}
+                <div className="overview-text-wrap inner">
+                    <span className="overview-tit">[줄거리]</span>
+                    <p className="overview-text">{infoData.overview}</p>
+                </div>
             </div>
         </div>
     )

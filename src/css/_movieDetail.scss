@@ -63,5 +63,20 @@
         }
       }
     }
+    .overview-text-wrap{
+      margin-top: 80px;
+      font-size: .9rem;
+      .overview-tit{
+        display: block;
+        margin-bottom: 5px;
+      }
+      .overview-text{
+      line-height: 1.2;
+      font-weight: 300;
+        //overflow:hidden;
+        //text-overflow:ellipsis;
+        //white-space:nowrap;
+      }
+    }
   }
 }
