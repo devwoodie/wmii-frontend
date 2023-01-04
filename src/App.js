@@ -30,7 +30,7 @@ const App = () => {
                 <Route path="/search" element={<Search apiUrl={apiUrl} />} />
                 <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} />} />
                 <Route path="/myinfo/detail" element={<MyInfoDetail />} />
-                <Route path="/detail" element={<MovieDetail />} />
+                <Route path="/detail" element={<MovieDetail apiUrl={apiUrl} />} />
             </Routes>
             <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
         </div>

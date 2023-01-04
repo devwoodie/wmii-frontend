@@ -4,6 +4,7 @@ import MovieDetail from "./MovieDetail";
 import axios from "axios";
 import Swiper from "swiper";
 import 'swiper/css';
+import {element} from "prop-types";
 
 const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
@@ -59,11 +60,6 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
         pagination : false,
     })
 
-    // const clickMovie = () => {
-    //     navigate('/detail');
-    //     console.log(data)
-    // }
-
     return(
         <div className="Home inner">
             <div className="home-movie-wrap swiper recentSwiper" >
@@ -72,7 +68,9 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     {
                         nowPlayingData.map((data, key) => (
                             <li onClick={() => {
-                                navigate('/detail',{data})
+                                navigate('/detail',{
+                                    state : {data: data.id}
+                                });
                             }} key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
@@ -93,7 +91,11 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                 <ul className="home-movie-list swiper-wrapper">
                     {
                         upComingData.map((data, key) => (
-                            <li onClick={() => {navigate('/detail')}} key={data.id} className="swiper-slide home-movie-cont">
+                            <li onClick={() => {
+                                navigate('/detail',{
+                                    state : {data: data.id}
+                                });
+                            }} key={data.id} className="swiper-slide home-movie-cont">
                                 <div className="movie-poster">
                                     <img src={"//image.tmdb.org/t/p/original/"+data.poster_path} alt="movie-poster" />
                                 </div>
