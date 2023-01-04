@@ -5,7 +5,7 @@ import axios from "axios";
 const MovieDetail = ({apiUrl}) => {
     const location = useLocation();
     const movieId = location.state.data;
-    const [infoData, setInfoData] = useState();
+    const [infoData, setInfoData] = useState('');
 
     useEffect(() => {
         detailInfo();
@@ -30,7 +30,7 @@ const MovieDetail = ({apiUrl}) => {
 
     return(
         <div className="MovieDetail inner">
-
+            {infoData.title}
         </div>
     )
 }
