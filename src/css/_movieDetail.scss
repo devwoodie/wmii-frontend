@@ -26,6 +26,7 @@
       }
       .detail-text-wrap{
         margin-left: 5%;
+        width: 80%;
         span{display: block;}
         .movie-title{
           font-size: 1.1rem;
@@ -73,9 +74,11 @@
       .overview-text{
       line-height: 1.2;
       font-weight: 300;
-        //overflow:hidden;
-        //text-overflow:ellipsis;
-        //white-space:nowrap;
+        &.hide{
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
+        }
       }
     }
   }

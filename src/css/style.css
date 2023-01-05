@@ -258,6 +258,7 @@
 }
 .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap {
   margin-left: 5%;
+  width: 80%;
 }
 .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap span {
   display: block;
@@ -311,6 +312,11 @@
 .MovieDetail .detail-wrap .overview-text-wrap .overview-text {
   line-height: 1.2;
   font-weight: 300;
+}
+.MovieDetail .detail-wrap .overview-text-wrap .overview-text.hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .inner {
