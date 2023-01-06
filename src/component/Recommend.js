@@ -7,9 +7,10 @@ const Recommend = () => {
 
     const [recommend, setRecommend] = useState(false);
 
-    const ID_KEY = '0BhdufNATIrhn8DtcoRu';
-    const SECRET_KEY = 'bEDLIjkryc';
-    const searchUrl = '/v1/search/movie.json';
+    const movieRecommend = () => {
+
+        setRecommend(true)
+    };
 
     return(
         <div className="Recommend inner">
@@ -23,7 +24,7 @@ const Recommend = () => {
                         <Mbti />
                         <Genre />
                         <Year />
-                        <button onClick={() => {setRecommend(true)}} className="recommend-btn" type="button">영화 추천 받기</button>
+                        <button onClick={movieRecommend} className="recommend-btn" type="button">영화 추천 받기</button>
                     </form>
             }
         </div>
