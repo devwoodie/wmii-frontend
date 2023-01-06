@@ -1,4 +1,5 @@
 import {useLocation} from "react-router";
+import {AiOutlineStar, AiFillStar} from "react-icons/ai";
 import {useEffect, useState} from "react";
 import axios from "axios";
 
@@ -6,6 +7,7 @@ const MovieDetail = ({apiUrl}) => {
     const location = useLocation();
     const movieId = location.state.data;
     const [moreText, setMoreText] = useState(false);
+    const [favorite, setFavorite] = useState(false);
     const [infoData, setInfoData] = useState('');
     const [infoGenres,setInfoGenres] = useState([]);
 
@@ -40,7 +42,14 @@ const MovieDetail = ({apiUrl}) => {
                         <img src={"//image.tmdb.org/t/p/original/"+infoData.poster_path} alt="movie-poster"/>
                     </div>
                     <div className="detail-text-wrap">
-                        <span className="movie-title">{infoData.title}</span>
+                        <span className="movie-title">
+                            {infoData.title}
+                            <i className="favorite-btn">
+                                {
+                                    favorite ? <AiFillStar onClick={() => {setFavorite(false)}} /> : <AiOutlineStar onClick={() => {setFavorite(true)}} />
+                                }
+                            </i>
+                        </span>
                         <span className="movie-title-en">{infoData.original_title}</span>
                         <div className="sub-text-wrap">
                             <span className="sub-text">{infoData.release_date}개봉</span>
@@ -66,7 +75,7 @@ const MovieDetail = ({apiUrl}) => {
                         </div>
                 }
                 </div>
-                <div className="inner">sdfsdfssd</div>
+
             </div>
         </div>
     )

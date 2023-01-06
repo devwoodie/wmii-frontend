@@ -265,6 +265,19 @@
 }
 .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title {
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+.MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title .favorite-btn {
+  color: #D64C50;
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+.MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title .favorite-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title-en {
   font-size: 0.7rem;
