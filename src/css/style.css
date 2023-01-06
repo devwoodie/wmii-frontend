@@ -318,6 +318,13 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.MovieDetail .detail-wrap .overview-text-wrap .more-btn {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.MovieDetail .detail-wrap .overview-text-wrap .more-btn.hide {
+  display: none;
+}
 
 .inner {
   padding: 5vw;

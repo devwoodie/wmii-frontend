@@ -80,6 +80,13 @@
           white-space:nowrap;
         }
       }
+      .more-btn{
+        font-size: .8rem;
+        color: rgba(255, 255, 255, 0.4);
+        &.hide{
+          display: none;
+        }
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ import axios from "axios";
 const MovieDetail = ({apiUrl}) => {
     const location = useLocation();
     const movieId = location.state.data;
+    const [moreText, setMoreText] = useState(false);
     const [infoData, setInfoData] = useState('');
     const [infoGenres,setInfoGenres] = useState([]);
 
@@ -55,9 +56,17 @@ const MovieDetail = ({apiUrl}) => {
                     </div>
                 </div>
                 <div className="overview-text-wrap inner">
-                    <span className="overview-tit">[줄거리]</span>
-                    <p className="overview-text hide">{infoData.overview}</p>
+                {
+                    infoData.overview === '' ? '' :
+                        <div>
+                            <span className="overview-tit">[줄거리]</span>
+                            <p className={moreText ? "overview-text" : "overview-text hide" }>{infoData.overview}</p>
+                            <span className={moreText ? "more-btn more-text hide" : "more-btn more-text" } onClick={() => {setMoreText(true)}}>더보기..</span>
+                            <span className={moreText ? "more-btn more-text" : "more-btn more-text hide" } onClick={() => {setMoreText(false)}}>숨기기</span>
+                        </div>
+                }
                 </div>
+                <div className="inner">sdfsdfssd</div>
             </div>
         </div>
     )
