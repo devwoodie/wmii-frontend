@@ -6,32 +6,40 @@ import {useEffect, useState} from "react";
 const Recommend = () => {
 
     const [recommend, setRecommend] = useState(false);
+    const [isGenre, setIsGenre] = useState('');
 
-    const movieRecommend = () => {
 
-        setRecommend(true)
+    const handleClick = () => {
+        const genre = document.querySelectorAll('input[name="genre"]');
+        genre.forEach((genres) => {
+            if(genres.checked){
+                setIsGenre(genres.value)
+                setRecommend(true);
+            };
+        });
+
     };
+
 
     return(
         <div className="Recommend inner">
             <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 내게 맞는 영화 추천</h2>
             {
                 recommend ?
-                    <RecommendList /> :
+                    <RecommendList isGenre={isGenre} /> :
                     <form className="recommend-qa">
                         <Gender />
                         <Age />
                         <Mbti />
                         <Genre />
-                        <Year />
-                        <button onClick={movieRecommend} className="recommend-btn" type="button">영화 추천 받기</button>
+                        <button onClick={handleClick} className="recommend-btn" type="button">영화 추천 받기</button>
                     </form>
             }
         </div>
     )
 }
 //성별
-const Gender = () => {
+const Gender = ({}) => {
     return(
         <div className="qa-wrap">
             <h3 className="question">성별</h3>
@@ -152,30 +160,5 @@ const Genre = () => {
         </div>
     )
 }
-//year
-const Year = () => {
-    return(
-        <div className="qa-wrap">
-            <h3 className="question">선호하는 연도</h3>
-            <div className="answer-wrap">
-                <div className="answer">
-                    <input value="1990" name="year" id="1990" type="radio" />
-                    <label htmlFor="1990">1990년대</label>
-                </div>
-                <div className="answer">
-                    <input value="2000" name="year" id="2000" type="radio" />
-                    <label htmlFor="2000">2000년대</label>
-                </div>
-                <div className="answer">
-                    <input value="2010" name="year" id="2010" type="radio" />
-                    <label htmlFor="2010">2010년대</label>
-                </div>
-                <div className="answer">
-                    <input value="2020" name="year" id="2020" type="radio" />
-                    <label htmlFor="2020">2020년대</label>
-                </div>
-            </div>
-        </div>
-    )
-}
+
 export default Recommend;

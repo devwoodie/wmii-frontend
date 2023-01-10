@@ -1,4 +1,5 @@
-const RecommendList = () => {
+const RecommendList = ({isGenre}) => {
+    console.log(isGenre)
     return(
         <div className="RecommendList SearchMovies">
             <div className="search-movie-list">
