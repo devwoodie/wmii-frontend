@@ -2,7 +2,7 @@ import {BiMessageSquareDetail} from "react-icons/bi";
 import {BsFillPencilFill, BsPlusLg} from "react-icons/bs";
 import {MdOutlineCancel} from "react-icons/md";
 import axios from "axios";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef} from "react";
 
 const Community = () => {
 
@@ -62,18 +62,41 @@ const Community = () => {
 }
 
 const WriteWrap = ({setIsResgist}) => {
+
+    const textArea = useRef(null);
+    const [radioValue, setRadioValue] = useState('');
+
+    const radioHandle = (e) => {
+        const labelText = e.target.value;
+        setRadioValue(labelText);
+    };
+
+    const validationChk = () => {
+        const textCont = textArea.current.value;
+        if(textCont === '' || radioValue === ''){
+            //전송 불가
+            console.log('no');
+        }else{
+            //전송 가능
+            console.log('yes');
+        };
+    };
+
     return(
         <div className="write-wrap inner">
             <span onClick={() => {setIsResgist(false)}} className="write-cls"><MdOutlineCancel/></span>
             <div className="label-wrap">
-                <span className="label on">영화후기</span>
-                <span className="label">영화추천</span>
-                <span className="label">자유내용</span>
+                <input type="radio" id="review" name="label" value="review" onChange={radioHandle}/>
+                <label className="label" htmlFor="review">영화후기</label>
+                <input type="radio" id="recommend" name="label" value="recommend" onChange={radioHandle}/>
+                <label className="label" htmlFor="recommend">영화추천</label>
+                <input type="radio" id="free" name="label" value="free" onChange={radioHandle}/>
+                <label className="label" htmlFor="free">자유내용</label>
             </div>
             <div className="com-textarea">
-                <textarea></textarea>
+                <textarea ref={textArea}></textarea>
             </div>
-            <button type="button" className="regist-ok"><BsFillPencilFill/> 글쓰기</button>
+            <button type="button" onClick={validationChk} className="regist-ok"><BsFillPencilFill/> 글쓰기</button>
         </div>
     )
 }
