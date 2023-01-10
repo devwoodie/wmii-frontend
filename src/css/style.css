@@ -395,7 +395,7 @@
 }
 
 .wrap-tit {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
   display: flex;
   justify-content: flex-start;
@@ -405,7 +405,7 @@
   color: #1d864a;
   display: inline-block;
   margin-right: 10px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   width: 25px;
   height: 30px;
 }
