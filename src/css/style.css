@@ -61,6 +61,9 @@
   padding: 10px;
   margin-bottom: 20px;
 }
+.Community .community-wrap .community-cont:last-child {
+  margin: 0;
+}
 .Community .community-wrap .community-cont .label {
   background: #1d864a;
   font-size: 0.7rem;
@@ -99,6 +102,61 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.Community .write-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(56, 56, 72, 0.95);
+  width: 100%;
+}
+.Community .write-wrap .write-cls {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5vw;
+  top: 5vw;
+}
+.Community .write-wrap .label-wrap {
+  margin-bottom: 15px;
+}
+.Community .write-wrap .label-wrap .label {
+  background: #d5d5d5;
+  color: #23232E;
+  font-size: 0.7rem;
+  padding: 4px;
+  border-radius: 3px;
+  line-height: normal;
+  margin-right: 10px;
+}
+.Community .write-wrap .label-wrap .label.on {
+  background: #1d864a;
+  color: #d5d5d5;
+}
+.Community .write-wrap .com-textarea {
+  width: 100%;
+}
+.Community .write-wrap .com-textarea textarea {
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  padding: 10px;
+  line-height: 1.1;
+}
+.Community .write-wrap .regist-ok {
+  margin: 10px auto;
+  background: #1d864a;
+  color: #d5d5d5;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  display: block;
+  width: 40%;
 }
 
 .Search .search-wrap {
