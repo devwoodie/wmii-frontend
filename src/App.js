@@ -5,9 +5,9 @@ import Search from "./component/Search";
 import MyInfo from "./component/MyInfo";
 import MyInfoDetail from "./component/MyInfoDetail";
 import MovieDetail from "./component/MovieDetail";
-import { MdOutlineHome, MdOutlineMessage, MdOutlineManageSearch } from 'react-icons/md';
+import { MdOutlineHome } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
-import { BiMessageDetail } from 'react-icons/bi';
+import { BiMessageDetail, BiSearchAlt } from 'react-icons/bi';
 
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";
@@ -43,7 +43,7 @@ const NavTab = ({navigate,pageIndex,setPageIndex}) => {
     return(
         <div className="navi-wrap">
             <button className={pageIndex === 0 ? "navi-btn active" : "navi-btn"} onClick={() => {navigate('/'); setPageIndex(0)}}><MdOutlineHome/></button>
-            <button className={pageIndex === 1 ? "navi-btn active" : "navi-btn"} onClick={() => {navigate('/search'); setPageIndex(1)}}><MdOutlineManageSearch /></button>
+            <button className={pageIndex === 1 ? "navi-btn active" : "navi-btn"} onClick={() => {navigate('/search'); setPageIndex(1)}}><BiSearchAlt /></button>
             <button className={pageIndex === 2 ? "navi-btn active" : "navi-btn"} onClick={() => {navigate('/community'); setPageIndex(2)}}><BiMessageDetail /></button>
             <button className={pageIndex === 3 ? "navi-btn active" : "navi-btn"} onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><HiOutlineUserCircle /></button>
         </div>
