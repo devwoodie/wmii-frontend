@@ -25,7 +25,6 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     language : 'ko',
                 }
             }).then((response) => {
-                // console.log(response.data.results)
                 setNowPlayingData(response.data.results)
             })
         }
@@ -43,7 +42,6 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     language : 'ko',
                 }
             }).then((response) => {
-                console.log(response.data.results)
                 setUpComingData(response.data.results)
             })
         }
