@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const Search = ({apiUrl}) => {
+const Search = ({apiUrl ,navigate}) => {
 
     const searchText = useRef(null);
     let [searchList, setSearchList] = useState([]);
@@ -17,13 +17,21 @@ const Search = ({apiUrl}) => {
             alert('키워드를 입력해주세요');
             setNoSearch(false);
         }else{
-            axios.get(`${apiUrl}now_playing`,{
+            axios.get(`${apiUrl}search/movie`,{
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
-                    language : 'ko'
+                    language : 'ko',
+                    query : keyword
                 }
             }).then((response) => {
-                console.log(response.data.results)
+                setNoSearch(true);
+                const movieData = response.data.results;
+                setSearchList(movieData);
+                if(movieData.length === 0){
+                    setEmptyList(true);
+                }else{
+                    setEmptyList(false);
+                };
                 }).catch((error) => {
                 console.log(error);
             });
@@ -45,6 +53,8 @@ const Search = ({apiUrl}) => {
                             return (
                                 <SearchMovie
                                     key={key}
+                                    movie={movie}
+                                    navigate={navigate}
                                 />
                             )
                         })
@@ -70,15 +80,19 @@ const DefaultPage = () => {
     )
 }
 
-const SearchMovie = () => {
+const SearchMovie = ({movie, navigate}) => {
     return(
-        <div className="search-movie-list">
-            <div className="search-movie-poster"><img src="" alt="movie-poster" /></div>
-            <span className="movie-title"></span>
+        <div className="search-movie-list" key={movie.id} onClick={() => {
+            navigate('/detail',{
+                state : {data: movie.id}
+            });
+        }} >
+            <div className="search-movie-poster"><img src={"//image.tmdb.org/t/p/original/"+movie.poster_path} alt="movie-poster" /></div>
+            <span className="movie-title">{movie.title}</span>
             <div className="sub-title">
-                <span className="genre"></span>
+                <span className="opening-date">{movie.release_date}</span>
                 <span className="bar">|</span>
-                <span className="opening-date">평점: </span>
+                <span className="genre">평점: {movie.vote_average}</span>
             </div>
         </div>
     )

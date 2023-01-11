@@ -19,7 +19,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
     //최신 영화
     const nowPlaying = async () => {
         try{
-            await axios.get(`${apiUrl}now_playing`,{
+            await axios.get(`${apiUrl}movie/now_playing`,{
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
                     language : 'ko',
@@ -37,7 +37,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
     //개봉 예정 영화
     const upComing = async () => {
         try{
-            await axios.get(`${apiUrl}upcoming`,{
+            await axios.get(`${apiUrl}movie/upcoming`,{
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
                     language : 'ko',

@@ -32,18 +32,20 @@
 .SearchMovies{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 20px 0 50px;
   .search-movie-list {
-    width: 40%;
+    width: 140px;
     margin: 20px 0;
     .search-movie-poster {
       border-radius: 10px;
       box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
       overflow: hidden;
-      height: 220px; //임시
-      background: #595959; //임시
+      height: 210px;
+      img{
+        height: 100%;
+      }
     }
     .movie-title {
       font-size: 1rem;

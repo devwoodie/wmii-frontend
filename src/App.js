@@ -14,7 +14,7 @@ import {useEffect, useState} from "react";
 
 
 const App = () => {
-    const apiUrl = "https://api.themoviedb.org/3/movie/";
+    const apiUrl = "https://api.themoviedb.org/3/";
     let navigate = useNavigate();
     let [pageIndex, setPageIndex] = useState(0);
 
@@ -29,7 +29,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home apiUrl={apiUrl} navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/community" element={<Community />} />
-                <Route path="/search" element={<Search apiUrl={apiUrl} />} />
+                <Route path="/search" element={<Search apiUrl={apiUrl} navigate={navigate} />} />
                 <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} />} />
                 <Route path="/myinfo/detail" element={<MyInfoDetail />} />
                 <Route path="/detail" element={<MovieDetail apiUrl={apiUrl} />} />

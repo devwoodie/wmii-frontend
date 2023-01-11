@@ -168,7 +168,7 @@
   width: 80%;
   text-align: center;
   position: relative;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
 }
 .Search .search-wrap .search-box {
   background: #23232E;
@@ -423,20 +423,22 @@
 .SearchMovies {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 20px 0 50px;
 }
 .SearchMovies .search-movie-list {
-  width: 40%;
+  width: 140px;
   margin: 20px 0;
 }
 .SearchMovies .search-movie-list .search-movie-poster {
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
   overflow: hidden;
-  height: 220px;
-  background: #595959;
+  height: 210px;
+}
+.SearchMovies .search-movie-list .search-movie-poster img {
+  height: 100%;
 }
 .SearchMovies .search-movie-list .movie-title {
   font-size: 1rem;

@@ -17,7 +17,7 @@ const MovieDetail = ({apiUrl}) => {
 
     const detailInfo = async () => {
         try{
-            await axios.get(apiUrl+movieId,{
+            await axios.get(`${apiUrl}movie/${movieId}`,{
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
                     language : 'ko',
