@@ -40,7 +40,7 @@ const Search = ({apiUrl ,navigate}) => {
 
 
     return(
-        <div className="Search inner">
+        <div className="Search inner sec-mgt">
             <h2 className="wrap-tit"><span className="tit-icon"><BsSearch/></span> 영화 검색</h2>
             <div className="search-wrap">
                 <input type="text" ref={searchText} className="search-box" placeholder="Search..."/>

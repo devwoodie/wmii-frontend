@@ -20,14 +20,16 @@ const App = () => {
 
     return (
         <div className="App">
-            <div className="header-wrap">
-                {/*<h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}><img src="/img/wmii-logo.png" alt="logo" /></h1>*/}
-                <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
-                {
-                    pageIndex === 3 ? '' : <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">큰땃쥐</span> 님</div>
-                }
-            </div>
-            <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
+            <header className="header-wrap">
+                <div className="header">
+                    {/*<h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}><img src="/img/wmii-logo.png" alt="logo" /></h1>*/}
+                    <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
+                    {
+                        pageIndex === 3 ? '' : <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">큰땃쥐</span> 님</div>
+                    }
+                </div>
+                <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
+            </header>
             <Routes>
                 <Route path="/" element={<Home apiUrl={apiUrl} navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/community" element={<Community />} />

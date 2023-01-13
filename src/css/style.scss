@@ -10,23 +10,29 @@
 .App{
   //header
   .header-wrap{
+    position: fixed;
+    left: 0; top: 0;
     width: 100%;
-    padding: 3vw 5vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    //background: rgba(35, 35, 46, 0.5);
-    .logo{
-      //width: 110px;
-      font-size: 2rem;
-      color: $mainGreen;
-      font-weight: bold;
-      background: linear-gradient(to left, #44cb7d, #1d864a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+    .header{
+      width: 100%;
+      padding: 5px 5vw;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      background: #fff;
+      .logo{
+        //width: 110px;
+        font-size: 2rem;
+        color: $mainGreen;
+        font-weight: bold;
+        background: linear-gradient(to left, #44cb7d, #1d864a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
-
   }
 
   //navigate wrap

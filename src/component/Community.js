@@ -9,7 +9,7 @@ const Community = () => {
     const [isRegist, setIsResgist] = useState(false);
 
     return(
-        <div className="Community inner">
+        <div className="Community inner sec-mgt">
             <h2 className="wrap-tit"><span className="tit-icon"><BiMessageSquareDetail/></span> 커뮤니티</h2>
             <ul className="community-wrap">
                 <li className="community-cont">

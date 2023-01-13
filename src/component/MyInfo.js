@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 const MyInfo = ({HiOutlineUserCircle ,navigate}) => {
     return(
-        <div className="MyInfo inner">
+        <div className="MyInfo inner sec-mgt">
             <div className="user-wrap">
                 <div className="user-left">
                     <span className="user-icon"><HiOutlineUserCircle /></span>

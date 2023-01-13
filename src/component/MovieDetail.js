@@ -34,7 +34,7 @@ const MovieDetail = ({apiUrl}) => {
     };
 
     return(
-        <div className="MovieDetail">
+        <div className="MovieDetail sec-mgt">
             <div className="detail-wrap">
                 <div className="movie-poster-bg"><img src={"//image.tmdb.org/t/p/original/"+infoData.backdrop_path} alt="movie-bg"/></div>
                 <div className="detail-title-wrap inner">

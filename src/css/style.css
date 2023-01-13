@@ -394,6 +394,10 @@
   margin-top: 50px;
 }
 
+.sec-mgt {
+  margin-top: 91px;
+}
+
 .start {
   opacity: 0;
 }
@@ -473,14 +477,23 @@
 }
 
 .App .header-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
-  padding: 3vw 5vw;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.App .header-wrap .header {
+  width: 100%;
+  padding: 5px 5vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  background: #fff;
 }
-.App .header-wrap .logo {
+.App .header-wrap .header .logo {
   font-size: 2rem;
   color: #1d864a;
   font-weight: bold;
