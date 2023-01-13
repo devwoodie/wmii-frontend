@@ -11,10 +11,10 @@
       border: 1px solid $mainGreen;
       border-radius: 10px;
       padding: 8px 10px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       width: 100%;
       &::placeholder{
-        color: $mainGreen;
+        color: #9f9f9f;
       }
     }
     .search-btn{
@@ -29,21 +29,8 @@
 
     }
   }
-  .hash-tag-wrap{
-    width: 75%;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    .hash-tag{
-      margin: 0 15px 5px 0;
-      font-size: .8rem;
-      color: $mainText;
-    }
-  }
   .search-text{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     opacity: .6;
     line-height: 1.5;

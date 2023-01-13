@@ -69,12 +69,6 @@ const Search = ({apiUrl ,navigate}) => {
 const DefaultPage = () => {
     return(
         <div className="default-text">
-            <ul className="hash-tag-wrap">
-                <li className="hash-tag">#올빼미</li>
-                <li className="hash-tag">#올빼미</li>
-                <li className="hash-tag">#올빼미</li>
-                <li className="hash-tag">#올빼미</li>
-            </ul>
             <p className="search-text">제목, 배우, 키워드를<br/>검색해주세요</p>
         </div>
     )
