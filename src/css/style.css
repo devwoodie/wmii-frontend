@@ -482,7 +482,7 @@
   top: 0;
   width: 100%;
   z-index: 99;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .App .header-wrap .header {
   width: 100%;
@@ -492,6 +492,12 @@
   justify-content: space-between;
   align-items: flex-end;
   background: #fff;
+}
+.App .header-wrap .header .burger-menu {
+  font-size: 1.5rem;
+}
+.App .header-wrap .header .burger-menu svg {
+  width: 100%;
 }
 .App .header-wrap .header .logo {
   font-size: 2rem;

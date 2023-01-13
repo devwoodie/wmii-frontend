@@ -5,7 +5,7 @@ import Search from "./component/Search";
 import MyInfo from "./component/MyInfo";
 import MyInfoDetail from "./component/MyInfoDetail";
 import MovieDetail from "./component/MovieDetail";
-import { MdOutlineHome } from 'react-icons/md';
+import { MdOutlineHome, MdOutlineMenu } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { BiMessageDetail, BiSearchAlt, BiCopyright } from 'react-icons/bi';
 
@@ -22,7 +22,9 @@ const App = () => {
         <div className="App">
             <header className="header-wrap">
                 <div className="header">
-                    {/*<h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}><img src="/img/wmii-logo.png" alt="logo" /></h1>*/}
+                    <span className="burger-menu">
+                        <MdOutlineMenu />
+                    </span>
                     <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
                     {
                         pageIndex === 3 ? '' : <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">큰땃쥐</span> 님</div>
