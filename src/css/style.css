@@ -492,12 +492,7 @@
   justify-content: space-between;
   align-items: flex-end;
   background: #fff;
-}
-.App .header-wrap .header .burger-menu {
-  font-size: 1.5rem;
-}
-.App .header-wrap .header .burger-menu svg {
-  width: 100%;
+  position: relative;
 }
 .App .header-wrap .header .logo {
   font-size: 2rem;
@@ -524,7 +519,7 @@
   border: none;
   display: inline-block;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   height: 40px;
   position: relative;
   border-bottom: 3px solid transparent;

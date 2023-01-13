@@ -22,9 +22,6 @@ const App = () => {
         <div className="App">
             <header className="header-wrap">
                 <div className="header">
-                    <span className="burger-menu">
-                        <MdOutlineMenu />
-                    </span>
                     <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
                     {
                         pageIndex === 3 ? '' : <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">큰땃쥐</span> 님</div>
