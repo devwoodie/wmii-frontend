@@ -11,30 +11,37 @@
   //header
   .header-wrap{
     width: 100%;
-    padding: 4vw 5vw;
+    padding: 3vw 5vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     background: rgba(35, 35, 46, 0.5);
     .logo{
-      width: 110px;
+      //width: 110px;
+      font-size: 2rem;
+      color: $mainGreen;
+      font-weight: bold;
+      background: linear-gradient(to left, #44cb7d, #1d864a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
   }
 
   //navigate wrap
   .navi-wrap{
-    position: fixed;
-    left: 0; bottom: 0;
+    //position: fixed;
+    //left: 0; bottom: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 5px 0 0;
     text-align: center;
-    background: rgba(56, 56, 72, 0.95);
+    //background: rgba(56, 56, 72, 0.95);
+    background: linear-gradient(to left, #44cb7d, #1d864a);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 20px 20px 0 0;
+    //border-radius: 20px 20px 0 0;
     overflow: hidden;
     box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
     z-index: 999;
@@ -42,11 +49,14 @@
       background: none;
       border: none;
       display: inline-block;
-      color: $mainGreen;
-      font-size: 2rem;
+      color: $mainText;
+      font-size: 1.7rem;
+      height: 40px;
       position: relative;
+      border-bottom: 3px solid transparent;
       &.active{
         color: $mainText;
+        border-bottom: 3px solid $mainText;
         &::after{
           display: inline-block;
           content: '';

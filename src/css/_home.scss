@@ -5,24 +5,26 @@
   margin-bottom: 100px;
   //최신영화, 개봉 예정 영화
   .home-movie-wrap{
+    overflow: visible;
     .home-movie-list {
       margin-top: 20px;
       .home-movie-cont {
-        width: 160px;
+        width: 150px;
         margin-right: 20px;
         .movie-poster {
           width: 100%;
           overflow: hidden;
           border-radius: 10px;
           box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-          height: 240px;
+          height: 225px;
           img{height: 100%;}
         }
         .movie-title {
+          padding: 0 5px;
           font-size: 1rem;
           text-align: center;
           display: block;
-          margin: 10px 0 5px;
+          margin: 10px auto 5px;
           overflow:hidden;
           text-overflow:ellipsis;
           white-space:nowrap;
@@ -31,6 +33,7 @@
           font-size: .7rem;
           text-align: center;
           display: block;
+          color: #9f9f9f;
           .bar {
             margin: 0 5px;
           }

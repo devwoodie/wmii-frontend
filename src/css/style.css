@@ -1,11 +1,14 @@
 .Home {
   margin-bottom: 100px;
 }
+.Home .home-movie-wrap {
+  overflow: visible;
+}
 .Home .home-movie-wrap .home-movie-list {
   margin-top: 20px;
 }
 .Home .home-movie-wrap .home-movie-list .home-movie-cont {
-  width: 160px;
+  width: 150px;
   margin-right: 20px;
 }
 .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster {
@@ -13,16 +16,17 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
-  height: 240px;
+  height: 225px;
 }
 .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster img {
   height: 100%;
 }
 .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-title {
+  padding: 0 5px;
   font-size: 1rem;
   text-align: center;
   display: block;
-  margin: 10px 0 5px;
+  margin: 10px auto 5px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -31,6 +35,7 @@
   font-size: 0.7rem;
   text-align: center;
   display: block;
+  color: #9f9f9f;
 }
 .Home .home-movie-wrap .home-movie-list .home-movie-cont .sub-title .bar {
   margin: 0 5px;
@@ -395,7 +400,7 @@
 }
 
 .wrap-tit {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: normal;
   display: flex;
   justify-content: flex-start;
@@ -405,17 +410,18 @@
   color: #1d864a;
   display: inline-block;
   margin-right: 10px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   width: 25px;
-  height: 30px;
+  height: 25px;
 }
 
 .user-name {
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.7rem;
+  margin-bottom: 5px;
 }
 .user-name .user-nick {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #1d864a;
 }
@@ -457,28 +463,29 @@
 
 .App .header-wrap {
   width: 100%;
-  padding: 4vw 5vw;
+  padding: 3vw 5vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   background: rgba(35, 35, 46, 0.5);
 }
 .App .header-wrap .logo {
-  width: 110px;
+  font-size: 2rem;
+  color: #1d864a;
+  font-weight: bold;
+  background: linear-gradient(to left, #44cb7d, #1d864a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .App .navi-wrap {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  padding: 15px 0;
+  padding: 5px 0 0;
   text-align: center;
-  background: rgba(56, 56, 72, 0.95);
+  background: linear-gradient(to left, #44cb7d, #1d864a);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 20px 20px 0 0;
   overflow: hidden;
   box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
   z-index: 999;
@@ -487,12 +494,15 @@
   background: none;
   border: none;
   display: inline-block;
-  color: #1d864a;
-  font-size: 2rem;
+  color: #d5d5d5;
+  font-size: 1.7rem;
+  height: 40px;
   position: relative;
+  border-bottom: 3px solid transparent;
 }
 .App .navi-wrap .navi-btn.active {
   color: #d5d5d5;
+  border-bottom: 3px solid #d5d5d5;
 }
 .App .navi-wrap .navi-btn.active::after {
   display: inline-block;
