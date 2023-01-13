@@ -1,6 +1,7 @@
 @import './mixin.scss';
 
-.inner{padding: 5vw;}
+.inner{padding: 5vw !important;}
+//.inner.other{padding: 3vw 5vw}
 .mgt{margin-top: 50px;}
 .start{opacity: 0;}
 .end{opacity: 1; transition : opacity 0.3s;}
@@ -41,7 +42,7 @@
     margin: 20px 0;
     .search-movie-poster {
       border-radius: 10px;
-      box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+      box-shadow: 5px 4px 15px rgb(55 60 57 / 50%);
       overflow: hidden;
       height: 210px;
       img{
@@ -63,4 +64,9 @@
       }
     }
   }
+}
+.middle-line{
+  display: block;
+  width: 100%; height: 10px;
+  background-color: #f1f1f1;
 }

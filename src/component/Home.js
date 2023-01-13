@@ -5,6 +5,7 @@ import axios from "axios";
 import Swiper from "swiper";
 import 'swiper/css';
 import {element} from "prop-types";
+import {BiCopyright} from "react-icons/bi";
 
 const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
@@ -59,8 +60,8 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
     })
 
     return(
-        <div className="Home inner">
-            <div className="home-movie-wrap swiper recentSwiper" >
+        <div className="Home">
+            <div className="inner home-movie-wrap swiper recentSwiper" >
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 최신 영화</h2>
                 <ul className="home-movie-list swiper-wrapper">
                     {
@@ -84,7 +85,8 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     }
                 </ul>
             </div>
-            <div className="home-movie-wrap mgt swiper recentSwiper">
+            <span className="middle-line"></span>
+            <div className="inner home-movie-wrap swiper recentSwiper">
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieFilter/></span> 개봉 예정 영화</h2>
                 <ul className="home-movie-list swiper-wrapper">
                     {
@@ -103,13 +105,17 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
                     }
                 </ul>
             </div>
-            <div className="banner-wrap mgt">
+            <span className="middle-line"></span>
+            <div className="banner-wrap inner">
                 <h2 className="wrap-tit"><span className="tit-icon"><MdTab/></span> 더 알아보기</h2>
                 <div className="main-banner" onClick={() => {navigate('/search'); setPageIndex(2)}}>영화 검색하기<MdArrowForwardIos/></div>
                 <Link className="main-banner" to="//m.search.naver.com/search.naver?where=m&sm=mtb_etc&qvt=0&query=%EA%B0%9C%EB%B4%89%EC%98%88%EC%A0%95%EC%98%81%ED%99%94" target="_blank">개봉 예정 영화<MdArrowForwardIos/></Link>
                 <div className="main-banner">영화 관련 뉴스 보기<MdArrowForwardIos/></div>
             </div>
-
+            <footer className="footer">
+                <BiCopyright />
+                <p> All Rights Reserved by devwoodie.project</p>
+            </footer>
         </div>
     )
 }

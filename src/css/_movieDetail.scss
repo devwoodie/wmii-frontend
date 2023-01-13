@@ -3,6 +3,8 @@
 //movieDetail
 .MovieDetail{
   padding-bottom: 100px;
+  background: linear-gradient(to bottom, $mainBg, 85%, #fff);
+  color: #fff;
   .detail-wrap{
     position: relative;
     .movie-poster-bg{
@@ -93,7 +95,7 @@
       }
       .more-btn{
         font-size: .8rem;
-        color: rgba(255, 255, 255, 0.4);
+        color: #d1d1d1;
         &.hide{
           display: none;
         }

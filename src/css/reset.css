@@ -25,9 +25,9 @@ footer, header, hgroup, menu, nav, section {
 html,body{
     width: 100vw;
     overflow-x: hidden;
-    background-color: #23232E;
+    /*background-color: #23232E;*/
     font-size: 18px;
-    color: #d5d5d5;
+    color: #000;
     font-family: 'Jua', sans-serif;
 }
 body {

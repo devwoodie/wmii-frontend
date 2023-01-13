@@ -7,7 +7,7 @@ import MyInfoDetail from "./component/MyInfoDetail";
 import MovieDetail from "./component/MovieDetail";
 import { MdOutlineHome } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
-import { BiMessageDetail, BiSearchAlt } from 'react-icons/bi';
+import { BiMessageDetail, BiSearchAlt, BiCopyright } from 'react-icons/bi';
 
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";

@@ -2,7 +2,6 @@
 
 //Home
 .Home{
-  margin-bottom: 100px;
   //최신영화, 개봉 예정 영화
   .home-movie-wrap{
     overflow: visible;
@@ -15,7 +14,7 @@
           width: 100%;
           overflow: hidden;
           border-radius: 10px;
-          box-shadow: 5px 2px 30px rgba(29, 134, 74, 0.5);
+          box-shadow: 5px 4px 15px rgb(55 60 57 / 50%);
           height: 225px;
           img{height: 100%;}
         }
@@ -46,7 +45,7 @@
   .banner-wrap{
     .main-banner{
       @include gradLiner();
-      margin-top: 20px;
+      margin: 20px 0;
       padding: 30px;
       font-size: 1.2rem;
       font-weight: normal;
@@ -55,6 +54,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      color: #fff;
     }
   }
 }
