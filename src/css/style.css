@@ -1,130 +1,463 @@
-/*
-Error: wrong number of arguments (1 for 3) for `rgb'
-        on line 17 of _home.scss
-        from line 1 of style.scss
+.Home .home-movie-wrap {
+  overflow: visible; }
+  .Home .home-movie-wrap .home-movie-list {
+    margin-top: 20px; }
+    .Home .home-movie-wrap .home-movie-list .home-movie-cont {
+      width: 150px;
+      margin-right: 20px; }
+      .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 5px 4px 15px rgba(55, 60, 57, 0.5);
+        height: 225px; }
+        .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-poster img {
+          height: 100%; }
+      .Home .home-movie-wrap .home-movie-list .home-movie-cont .movie-title {
+        padding: 0 5px;
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+        margin: 10px auto 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .Home .home-movie-wrap .home-movie-list .home-movie-cont .sub-title {
+        font-size: .7rem;
+        text-align: center;
+        display: block;
+        color: #9f9f9f; }
+        .Home .home-movie-wrap .home-movie-list .home-movie-cont .sub-title .bar {
+          margin: 0 5px; }
+.Home .banner-wrap .main-banner {
+  background: linear-gradient(135deg, #33a966, 40%, #0d6f37);
+  margin: 20px 0;
+  padding: 30px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: left;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff; }
 
-12:   .header-wrap{
-13:     position: fixed;
-14:     left: 0; top: 0;
-15:     width: 100%;
-16:     z-index: 99;
-17:     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-18:     .header{
-19:       width: 100%;
-20:       padding: 5px 5vw;
-21:       margin: 0 auto;
-22:       display: flex;
+.Community {
+  margin-bottom: 100px; }
+  .Community .community-wrap {
+    width: 100%;
+    margin-top: 30px; }
+    .Community .community-wrap .community-cont {
+      border: 1px solid #1d864a;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+      background: #fff;
+      position: relative; }
+      .Community .community-wrap .community-cont::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #1d864a;
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 10px;
+        z-index: -1; }
+      .Community .community-wrap .community-cont:last-child {
+        margin: 0; }
+      .Community .community-wrap .community-cont .label {
+        background: #1d864a;
+        color: #fff;
+        font-size: .7rem;
+        padding: 4px;
+        border-radius: 3px;
+        line-height: normal; }
+      .Community .community-wrap .community-cont .com-text {
+        margin: 15px 0; }
+      .Community .community-wrap .community-cont .com-sm-text {
+        font-size: .7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .Community .community-wrap .community-cont .com-sm-text span {
+          color: #9f9f9f; }
+        .Community .community-wrap .community-cont .com-sm-text .com-user-name .com-user-nick {
+          font-size: .9rem; }
+  .Community .regist-btn {
+    background: #1d864a;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vw;
+    font-size: 1.5rem;
+    border-radius: 50%; }
+    .Community .regist-btn svg {
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  .Community .write-wrap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: rgba(56, 56, 72, 0.95);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+    width: 100%; }
+    .Community .write-wrap .write-cls {
+      font-size: 1.5rem;
+      position: absolute;
+      right: 5vw;
+      top: 5vw;
+      color: #fff; }
+    .Community .write-wrap .label-wrap {
+      margin-bottom: 15px; }
+      .Community .write-wrap .label-wrap .label {
+        background: #fff;
+        color: #23232E;
+        font-size: .7rem;
+        padding: 4px;
+        border-radius: 3px;
+        line-height: normal;
+        margin-right: 10px; }
+      .Community .write-wrap .label-wrap input[type="radio"] {
+        display: none; }
+      .Community .write-wrap .label-wrap input[type="radio"]:checked + label {
+        background: #1d864a;
+        color: #fff; }
+    .Community .write-wrap .com-textarea {
+      width: 100%; }
+      .Community .write-wrap .com-textarea textarea {
+        border: none;
+        resize: none;
+        outline: none;
+        width: 100%;
+        height: 90px;
+        border-radius: 10px;
+        font-size: .9rem;
+        font-family: inherit;
+        padding: 10px;
+        line-height: 1.1; }
+    .Community .write-wrap .regist-ok {
+      margin: 10px auto;
+      background: #1d864a;
+      color: #fff;
+      padding: 5px 15px;
+      font-size: .9rem;
+      border-radius: 10px;
+      display: block;
+      width: 40%; }
 
-Backtrace:
-_home.scss:17
-style.scss:1
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:127:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 17 of _home.scss\A         from line 1 of style.scss\A \A 12:   .header-wrap{\A 13:     position: fixed;\A 14:     left: 0; top: 0;\A 15:     width: 100%;\A 16:     z-index: 99;\A 17:     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);\A 18:     .header{\A 19:       width: 100%;\A 20:       padding: 5px 5vw;\A 21:       margin: 0 auto;\A 22:       display: flex;"; }
+.Search .search-wrap {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  margin: 30px auto 0; }
+  .Search .search-wrap .search-box {
+    color: #000;
+    border: 1px solid #1d864a;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 1rem;
+    width: 100%; }
+    .Search .search-wrap .search-box::placeholder {
+      color: #9f9f9f; }
+  .Search .search-wrap .search-btn {
+    background: transparent;
+    color: #1d864a;
+    padding: 3px 10px;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    border-left: 1px solid #1d864a; }
+.Search .search-text {
+  margin-top: 30px;
+  text-align: center;
+  opacity: .6;
+  line-height: 1.5; }
+
+.MyInfo {
+  margin-bottom: 100px; }
+  .MyInfo .user-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d5d5d570; }
+    .MyInfo .user-wrap .user-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end; }
+      .MyInfo .user-wrap .user-left .user-icon {
+        color: #000;
+        background: none;
+        border: none;
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-right: 5px; }
+        .MyInfo .user-wrap .user-left .user-icon svg {
+          vertical-align: bottom; }
+    .MyInfo .user-wrap .user-detail {
+      width: 20%; }
+      .MyInfo .user-wrap .user-detail button {
+        display: inline-block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 5px 0;
+        font-size: .8rem;
+        color: #fff;
+        background: #23232E; }
+  .MyInfo .Favorites {
+    margin: 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d5d5d570; }
+    .MyInfo .Favorites .favorite-wrap .empty-list {
+      text-align: center;
+      width: 100%;
+      padding: 40px;
+      margin-top: 15px;
+      color: #9f9f9f;
+      border: 1px solid #9f9f9f;
+      border-radius: 10px;
+      font-size: .8rem; }
+
+.MovieDetail {
+  padding-bottom: 100px;
+  background: linear-gradient(to bottom, #23232E, 85%, #fff);
+  color: #fff; }
+  .MovieDetail .detail-wrap {
+    position: relative; }
+    .MovieDetail .detail-wrap .movie-poster-bg {
+      position: relative; }
+      .MovieDetail .detail-wrap .movie-poster-bg::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #f90000, #23232E);
+        position: absolute; }
+    .MovieDetail .detail-wrap .detail-title-wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: absolute;
+      left: 0;
+      top: 100px; }
+      .MovieDetail .detail-wrap .detail-title-wrap .movie-poster {
+        width: 170px; }
+      .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap {
+        margin-left: 5%;
+        width: 80%; }
+        .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap span {
+          display: block; }
+        .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title {
+          font-size: 1.1rem;
+          display: flex;
+          align-items: center;
+          line-height: normal; }
+          .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title .favorite-btn {
+            color: #D64C50;
+            margin-left: 5px;
+            font-size: 1.3rem; }
+            .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title .favorite-btn svg {
+              width: 100%;
+              height: 100%;
+              display: block; }
+        .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .movie-title-en {
+          font-size: 0.7rem;
+          color: rgba(255, 255, 255, 0.4);
+          line-height: 14px;
+          margin: 3px 0; }
+        .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .sub-text-wrap {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: .8rem;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-start;
+          margin-top: 10px; }
+          .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .sub-text-wrap .sub-text {
+            color: inherit;
+            font-size: inherit;
+            position: relative;
+            padding-right: 20px; }
+            .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .sub-text-wrap .sub-text::after {
+              content: '';
+              width: 1px;
+              height: 10px;
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: #fff;
+              opacity: 0.2; }
+            .MovieDetail .detail-wrap .detail-title-wrap .detail-text-wrap .sub-text-wrap .sub-text i {
+              margin-right: 5px; }
+    .MovieDetail .detail-wrap .overview-text-wrap {
+      margin-top: 90px;
+      font-size: .9rem; }
+      .MovieDetail .detail-wrap .overview-text-wrap .overview-tit {
+        display: block;
+        margin-bottom: 5px; }
+      .MovieDetail .detail-wrap .overview-text-wrap .overview-text {
+        line-height: 1.2;
+        font-weight: 300; }
+        .MovieDetail .detail-wrap .overview-text-wrap .overview-text.hide {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+      .MovieDetail .detail-wrap .overview-text-wrap .more-btn {
+        font-size: .8rem;
+        color: #d1d1d1; }
+        .MovieDetail .detail-wrap .overview-text-wrap .more-btn.hide {
+          display: none; }
+
+.inner {
+  padding: 5vw !important; }
+
+.mgt {
+  margin-top: 50px; }
+
+.sec-mgt {
+  margin-top: 91px; }
+
+.start {
+  opacity: 0; }
+
+.end {
+  opacity: 1;
+  transition: opacity 0.3s; }
+
+.wrap-tit {
+  font-size: 1.2rem;
+  font-weight: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end; }
+  .wrap-tit .tit-icon {
+    color: #1d864a;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    width: 25px;
+    height: 25px; }
+
+.user-name {
+  font-weight: normal;
+  font-size: .7rem;
+  margin-bottom: 5px; }
+  .user-name .user-nick {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1d864a; }
+
+.SearchMovies {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px 0 50px; }
+  .SearchMovies .search-movie-list {
+    width: 140px;
+    margin: 20px 0; }
+    .SearchMovies .search-movie-list .search-movie-poster {
+      border-radius: 10px;
+      box-shadow: 5px 4px 15px rgba(55, 60, 57, 0.5);
+      overflow: hidden;
+      height: 210px; }
+      .SearchMovies .search-movie-list .search-movie-poster img {
+        height: 100%; }
+    .SearchMovies .search-movie-list .movie-title {
+      font-size: 1rem;
+      text-align: center;
+      display: block;
+      margin: 10px 0; }
+    .SearchMovies .search-movie-list .sub-title {
+      font-size: .7rem;
+      text-align: center;
+      display: block; }
+      .SearchMovies .search-movie-list .sub-title .bar {
+        margin: 0 5px; }
+
+.middle-line {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #f1f1f1; }
+
+.App .header-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+  .App .header-wrap .header {
+    width: 100%;
+    padding: 5px 5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #fff;
+    position: relative; }
+    .App .header-wrap .header .logo {
+      font-size: 2rem;
+      color: #1d864a;
+      font-weight: bold;
+      background: linear-gradient(to left, #44cb7d, #1d864a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+.App .navi-wrap {
+  width: 100%;
+  padding: 5px 0 0;
+  text-align: center;
+  background: linear-gradient(to left, #44cb7d, #1d864a);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px -5px 20px rgba(255, 255, 255, 0.3);
+  z-index: 999; }
+  .App .navi-wrap .navi-btn {
+    background: none;
+    border: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+    height: 40px;
+    position: relative;
+    border-bottom: 3px solid transparent; }
+    .App .navi-wrap .navi-btn.active {
+      border-bottom: 3px solid #fff; }
+      .App .navi-wrap .navi-btn.active::after {
+        display: inline-block;
+        content: '';
+        width: 8vw;
+        height: 8vw;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #1d864a;
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(1rem); }
+.App .footer {
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  align-items: center;
+  color: #9f9f9f;
+  font-size: .8rem; }
+
+/*# sourceMappingURL=style.css.map */
