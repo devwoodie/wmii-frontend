@@ -15,8 +15,9 @@ import {useEffect, useState} from "react";
 
 const App = () => {
     const apiUrl = "https://api.themoviedb.org/3/";
-    let navigate = useNavigate();
-    let [pageIndex, setPageIndex] = useState(0);
+    const navigate = useNavigate();
+    const [pageIndex, setPageIndex] = useState(0);
+    const userId = true;
 
     return (
         <div className="App">
@@ -24,8 +25,10 @@ const App = () => {
                 <div className="header">
                     <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
                     {
-                        pageIndex === 3 ? '' : <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">유동우</span> 님</div>
+                        userId ? <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">유동우</span> 님</div> : <a href="#" className="login-btn">로그인</a>
                     }
+
+
                 </div>
                 <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
             </header>
@@ -33,7 +36,7 @@ const App = () => {
                 <Route path="/" element={<Home apiUrl={apiUrl} navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/search" element={<Search apiUrl={apiUrl} navigate={navigate} />} />
-                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} />} />
+                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} userId={userId} />} />
                 <Route path="/myinfo/detail" element={<MyInfoDetail />} />
                 <Route path="/detail" element={<MovieDetail apiUrl={apiUrl} />} />
             </Routes>

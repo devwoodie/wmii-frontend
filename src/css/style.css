@@ -221,42 +221,6 @@
 .MyInfo {
   margin-bottom: 100px;
 }
-.MyInfo .user-wrap {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 5px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(213, 213, 213, 0.4392156863);
-}
-.MyInfo .user-wrap .user-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.MyInfo .user-wrap .user-left .user-icon {
-  color: #000;
-  background: none;
-  border: none;
-  display: inline-block;
-  font-size: 1.6rem;
-  margin-right: 5px;
-}
-.MyInfo .user-wrap .user-left .user-icon svg {
-  vertical-align: bottom;
-}
-.MyInfo .user-wrap .user-detail {
-  width: 20%;
-}
-.MyInfo .user-wrap .user-detail button {
-  display: inline-block;
-  width: 100%;
-  border-radius: 10px;
-  padding: 5px 0;
-  font-size: 0.8rem;
-  color: #fff;
-  background: #23232E;
-}
 .MyInfo .Favorites {
   margin: 30px 0;
   padding-bottom: 10px;
@@ -271,6 +235,9 @@
   border: 1px solid #9f9f9f;
   border-radius: 10px;
   font-size: 0.8rem;
+}
+.MyInfo .no-login {
+  text-align: center;
 }
 
 .MovieDetail {
@@ -425,13 +392,17 @@
 
 .user-name {
   font-weight: normal;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-bottom: 5px;
 }
 .user-name .user-nick {
   font-size: 1rem;
   font-weight: bold;
   color: #1d864a;
+}
+
+.login-btn {
+  color: #9f9f9f;
 }
 
 .SearchMovies {
@@ -474,6 +445,80 @@
   width: 100%;
   height: 10px;
   background-color: #f1f1f1;
+}
+
+.user-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(213, 213, 213, 0.4392156863);
+}
+.user-wrap .user-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.user-wrap .user-left .user-icon {
+  color: #000;
+  background: none;
+  border: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 5px;
+}
+.user-wrap .user-left .user-icon svg {
+  vertical-align: bottom;
+}
+.user-wrap .user-detail {
+  width: 20%;
+}
+.user-wrap .user-detail button {
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  color: #fff;
+  background: #23232E;
+}
+
+.MyInfoDetail .info-detail-wrap {
+  margin-top: 30px;
+}
+.MyInfoDetail .info-detail-wrap .info-list {
+  margin-bottom: 50px;
+  position: relative;
+}
+.MyInfoDetail .info-detail-wrap .info-list label {
+  width: 25%;
+  font-size: 0.9rem;
+}
+.MyInfoDetail .info-detail-wrap .info-list .info-input {
+  display: block;
+  width: 100%;
+  border: 1px solid #000;
+  border-width: 0 0 1px 0;
+  font-size: 1rem;
+  margin-top: 10px;
+  background: none;
+}
+.MyInfoDetail .info-detail-wrap .info-list .info-input.disabled {
+  color: #9f9f9f;
+  border-color: #9f9f9f;
+}
+.MyInfoDetail .info-detail-wrap .info-list .nick-fix-btn {
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  width: 17%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 3px 0;
 }
 
 .App .header-wrap {
