@@ -1,4 +1,4 @@
-import {useLocation} from "react-router";
+import {useLocation} from "react-router-dom";
 import {AiOutlineStar, AiFillStar} from "react-icons/ai";
 import {useEffect, useState} from "react";
 import axios from "axios";
@@ -8,7 +8,7 @@ const MovieDetail = ({apiUrl}) => {
     const movieId = location.state.data;
     const [moreText, setMoreText] = useState(false);
     const [favorite, setFavorite] = useState(false);
-    const [infoData, setInfoData] = useState('');
+    const [infoData, setInfoData] = useState([]);
     const [infoGenres,setInfoGenres] = useState([]);
 
     useEffect(() => {
