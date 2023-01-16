@@ -27,8 +27,6 @@ const App = () => {
                     {
                         userId ? <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">유동우</span> 님</div> : <a href="#" className="login-btn">로그인</a>
                     }
-
-
                 </div>
                 <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
             </header>

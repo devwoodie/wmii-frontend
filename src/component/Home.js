@@ -61,7 +61,7 @@ const Home = ({navigate, setPageIndex ,Link, apiUrl}) => {
 
     return(
         <div className="Home sec-mgt">
-            <img src="//adimg.cgv.co.kr/images/202205/wooricard/220812_wooricard_750x304.jpg" />
+            <img src="/img/banner_3.png" alt="banner" />
             <div className="inner home-movie-wrap swiper recentSwiper" >
                 <h2 className="wrap-tit"><span className="tit-icon"><MdOutlineMovieCreation/></span> 최신 영화</h2>
                 <ul className="home-movie-list swiper-wrapper">
