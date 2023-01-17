@@ -17,7 +17,7 @@ const App = () => {
     const apiUrl = "https://api.themoviedb.org/3/";
     const navigate = useNavigate();
     const [pageIndex, setPageIndex] = useState(0);
-    const userId = true;
+    const userId = false;
 
     return (
         <div className="App">
