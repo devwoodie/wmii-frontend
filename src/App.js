@@ -5,10 +5,10 @@ import Search from "./component/Search";
 import MyInfo from "./component/MyInfo";
 import MyInfoDetail from "./component/MyInfoDetail";
 import MovieDetail from "./component/MovieDetail";
+import {Signup} from "./component/Signup";
 import { MdOutlineHome, MdOutlineMenu } from 'react-icons/md';
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { BiMessageDetail, BiSearchAlt, BiCopyright } from 'react-icons/bi';
-
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";
 
@@ -25,7 +25,7 @@ const App = () => {
                 <div className="header">
                     <h1 className="logo" onClick={() => {navigate('/'); setPageIndex(0)}}>wmii</h1>
                     {
-                        userId ? <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">유동우</span> 님</div> : <a href="#" className="login-btn">로그인</a>
+                        userId ? <div className="user-name" onClick={() => {navigate('/myinfo'); setPageIndex(3)}}><span className="user-nick">유동우</span> 님</div> : <a onClick={() => {navigate('/login')}} className="login-btn">로그인</a>
                     }
                 </div>
                 <NavTab navigate={navigate} pageIndex={pageIndex} setPageIndex={setPageIndex} />
@@ -37,6 +37,7 @@ const App = () => {
                 <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} userId={userId} />} />
                 <Route path="/myinfo/detail" element={<MyInfoDetail />} />
                 <Route path="/detail" element={<MovieDetail apiUrl={apiUrl} />} />
+                <Route path="/login" element={<Signup />} />
             </Routes>
 
         </div>
