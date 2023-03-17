@@ -23,7 +23,6 @@ const MovieDetail = ({apiUrl}) => {
                     language : 'ko',
                 }
             }).then((response) => {
-                console.log(response.data)
                 setInfoData(response.data);
                 setInfoGenres(response.data.genres);
             })
