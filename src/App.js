@@ -3,7 +3,6 @@ import Home from "./component/Home";
 import Community from "./component/Community";
 import Search from "./component/Search";
 import MyInfo from "./component/MyInfo";
-import MyInfoDetail from "./component/MyInfoDetail";
 import MovieDetail from "./component/MovieDetail";
 import Signup from "./component/Signup";
 import { MdOutlineHome, MdOutlineMenu } from 'react-icons/md';
@@ -11,13 +10,15 @@ import { HiOutlineUserCircle } from 'react-icons/hi';
 import { BiMessageDetail, BiSearchAlt, BiCopyright } from 'react-icons/bi';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import {useEffect, useState} from "react";
+import { useSelector } from "react-redux"
 
 const App = () => {
     const apiUrl = "https://api.themoviedb.org/3/";
     const navigate = useNavigate();
     const [pageIndex, setPageIndex] = useState(0);
-    const [displayName, setDisplayName] = useState("");
     const [userId, setUserId] = useState(false);
+    const [displayName, setDisplayName] = useState("");
+    const userInfo = useSelector((state) => state.user.value);
 
     return (
         <div className="App">
@@ -34,10 +35,9 @@ const App = () => {
                 <Route path="/" element={<Home apiUrl={apiUrl} navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/search" element={<Search apiUrl={apiUrl} navigate={navigate} />} />
-                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} userId={userId} />} />
-                <Route path="/myinfo/detail" element={<MyInfoDetail />} />
-                <Route path="/detail" element={<MovieDetail apiUrl={apiUrl} />} />
-                <Route path="/login" element={<Signup setUserId={setUserId} setDisplayName={setDisplayName} />} />
+                <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} userId={userId} displayName={displayName} />} />
+                <Route path="/detail" element={<MovieDetail apiUrl={apiUrl}  />} />
+                <Route path="/login" element={<Signup setUserId={setUserId} displayName={displayName} setDisplayName={setDisplayName} />} />
             </Routes>
 
         </div>

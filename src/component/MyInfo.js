@@ -1,8 +1,8 @@
-import MyInfoDetail from "./MyInfoDetail";
 import {BsBookmarkStar} from 'react-icons/bs';
 import { Routes, Route } from 'react-router-dom';
 
-const MyInfo = ({HiOutlineUserCircle ,navigate, userId}) => {
+const MyInfo = ({HiOutlineUserCircle ,navigate, userId, displayName}) => {
+
     return(
         <div className="MyInfo inner sec-mgt">
             {
@@ -11,9 +11,9 @@ const MyInfo = ({HiOutlineUserCircle ,navigate, userId}) => {
                         <div className="user-wrap">
                             <div className="user-left">
                                 <span className="user-icon"><HiOutlineUserCircle /></span>
-                                <div className="user-name"><span className="user-nick">유동우</span> 님, 안녕하세요</div>
+                                <div className="user-name"><span className="user-nick">{displayName}</span> 님, 안녕하세요</div>
                             </div>
-                            <div className="user-detail"><button type="button" onClick={() => {navigate('/myinfo/detail')}}>내 정보</button></div>
+                            <div className="user-detail"><button type="button" onClick={() => {alert("로그아웃이 불가능합니다.")} }>로그아웃</button></div>
                         </div>
                         <Favorites />
                     </> :
