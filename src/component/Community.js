@@ -4,9 +4,20 @@ import {MdOutlineCancel} from "react-icons/md";
 import axios from "axios";
 import {useEffect, useState, useRef} from "react";
 
-const Community = () => {
+const Community = ({ userInfo, displayName }) => {
 
     const [isRegist, setIsResgist] = useState(false);
+    console.log(isRegist);
+    console.log('userInfo:',userInfo)
+    console.log('displayName:',displayName)
+
+    function handleRegist(){
+        if(displayName === "") {
+            alert("로그인이 필요합니다.");
+        }else{
+            setIsResgist(true);
+        }
+    };
 
     return(
         <div className="Community inner sec-mgt">
@@ -20,41 +31,9 @@ const Community = () => {
                         <span className="com-user-name"><span className="com-user-nick">아니그게아니고</span> 님</span>
                     </div>
                 </li>
-                <li className="community-cont">
-                    <span className="label">영화추천</span>
-                    <p className="com-text">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</p>
-                    <div className="com-sm-text">
-                        <span className="com-now-date">2021-01-10</span>
-                        <span className="com-user-name"><span className="com-user-nick">아니그게아니고</span> 님</span>
-                    </div>
-                </li>
-                <li className="community-cont">
-                    <span className="label">영화추천</span>
-                    <p className="com-text">테스트</p>
-                    <div className="com-sm-text">
-                        <span className="com-now-date">2021-01-10</span>
-                        <span className="com-user-name"><span className="com-user-nick">아니그게아니고</span> 님</span>
-                    </div>
-                </li>
-                <li className="community-cont">
-                    <span className="label">영화후기</span>
-                    <p className="com-text">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</p>
-                    <div className="com-sm-text">
-                        <span className="com-now-date">2021-01-10</span>
-                        <span className="com-user-name"><span className="com-user-nick">아니그게아니고</span> 님</span>
-                    </div>
-                </li>
-                <li className="community-cont">
-                    <span className="label">영화후기</span>
-                    <p className="com-text">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</p>
-                    <div className="com-sm-text">
-                        <span className="com-now-date">2021-01-10</span>
-                        <span className="com-user-name"><span className="com-user-nick">아니그게아니고</span> 님</span>
-                    </div>
-                </li>
             </ul>
             {
-                !isRegist ? <button onClick={() => {setIsResgist(true)}} type="button" className="regist-btn"><BsPlusLg /></button> :
+                !isRegist ? <button onClick={handleRegist} type="button" className="regist-btn"><BsPlusLg /></button> :
                     <WriteWrap setIsResgist={setIsResgist} />
             }
         </div>

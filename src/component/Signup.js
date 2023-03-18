@@ -4,6 +4,8 @@ import { GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/aut
 import {useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userInfoData } from "../redux/userInfo";
+import {BiMessageSquareDetail} from "react-icons/bi";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Signup({setUserId, displayName, setDisplayName}){
 
@@ -40,7 +42,8 @@ export default function Signup({setUserId, displayName, setDisplayName}){
 
     return(
         <div className="Signup sec-mgt inner">
-            <button onClick={handleLogin}>login</button>
+            <h2 className="wrap-tit">로그인</h2>
+            <button className="google-login-btn" onClick={handleLogin}><FcGoogle className="google-logo"/> Google Login</button>
         </div>
     )
 

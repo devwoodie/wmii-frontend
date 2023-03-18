@@ -33,7 +33,7 @@ const App = () => {
             </header>
             <Routes>
                 <Route path="/" element={<Home apiUrl={apiUrl} navigate={navigate} setPageIndex={setPageIndex} Link={Link} />} />
-                <Route path="/community" element={<Community />} />
+                <Route path="/community" element={<Community displayName={displayName} userInfo={userInfo} />} />
                 <Route path="/search" element={<Search apiUrl={apiUrl} navigate={navigate} />} />
                 <Route path="/myinfo" element={<MyInfo HiOutlineUserCircle={HiOutlineUserCircle} navigate={navigate} userId={userId} displayName={displayName} />} />
                 <Route path="/detail" element={<MovieDetail apiUrl={apiUrl}  />} />
