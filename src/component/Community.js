@@ -1,7 +1,6 @@
 import {BiMessageSquareDetail} from "react-icons/bi";
 import {BsFillPencilFill, BsPlusLg} from "react-icons/bs";
 import {MdOutlineCancel} from "react-icons/md";
-import axios from "axios";
 import {useEffect, useState, useRef} from "react";
 import { useNavigate } from "react-router-dom";
 import {useFirestore} from "../hooks/useFirestore";
@@ -82,6 +81,7 @@ const WriteWrap = ({setIsResgist, displayName}) => {
         }else{
             //전송 가능
             addDocument({ displayName, text, radioValue });
+            alert("등록이 완료되었습니다.");
             setIsResgist(false);
         };
     };
