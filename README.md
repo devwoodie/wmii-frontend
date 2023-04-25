@@ -51,3 +51,57 @@
     - 검색 가능 텍스트
         - 영화 제목, 장르, 배우
         
+`File Structure`
+
+```
+src
+│  App.js
+│  App.test.js
+│  index.js
+│  reportWebVitals.js
+│  setupTests.js
+│
+├─component
+│      Community.js
+│      Home.js
+│      MovieDetail.js
+│      MyInfo.js
+│      Search.js
+│      Signup.js
+│
+├─css
+│  │  reset.css
+│  │  style.css
+│  │  style.css.map
+│  │  style.scss
+│  │  _common.scss
+│  │  _community.scss
+│  │  _home.scss
+│  │  _infoDetail.scss
+│  │  _mixin.scss
+│  │  _movieDetail.scss
+│  │  _myinfo.scss
+│  │  _search.scss
+│  │  _signup.scss
+│  │
+│  └─.sass-cache
+│      └─432ec9cb28ae5952bd4863bee856162e6dc58c31
+│              style.scssc
+│              _common.scssc
+│              _home.scssc
+│              _mixin.scssc
+│              _myinfo.scssc
+│              _recommend.scssc
+│              _search.scssc
+│
+├─firebase
+│      config.js
+│
+├─hooks
+│      useCollection.js
+│      useFirestore.js
+│
+└─redux
+        store.js
+        userInfo.js
+```
