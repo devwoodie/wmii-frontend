@@ -1,7 +1,5 @@
 ## 💡 what movie is it?
 
-[🔗 Site](https://wmii-85b73.web.app/) <br/>
-
 `Tect Stack`
 - React
     - redux-toolkit
